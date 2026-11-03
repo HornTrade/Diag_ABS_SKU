@@ -1610,9 +1610,12 @@ begin
      SelfTun_Break_KP:=Link_ProcBufIn[3];
 
      Brake_Time1:=Link_ProcBufIn[4];
-     Brake_Deccel1:=Link_ProcBufIn[5];
-
-     SelfTun_Engine_PTxx:=Link_ProcBufIn[6];
+     if Tip_Block < 8 then
+     begin
+          Brake_Deccel1:=Link_ProcBufIn[5];
+          SelfTun_Engine_PTxx:=Link_ProcBufIn[6];
+     end
+     else Brake_Deccel1:=Link_ProcBufIn[5]*256+Link_ProcBufIn[6];
      Engine_TorqueLoss:=Link_ProcBufIn[7]*256+Link_ProcBufIn[8];
 
 // блок Test_VAR6
@@ -1678,6 +1681,8 @@ begin
      Com_Link_Command(Moto_RD_RAM,Link_ProcBufOut,Link_ProcBufIn);
      SelfTun_Engine_Loss_K1:=Link_ProcBufIn[1];
      SelfTun_Engine_Loss_K2:=Link_ProcBufIn[2];
+     if Tip_Block >= 8 then
+        SelfTun_Engine_PTxx:=Link_ProcBufIn[3];
      TCO_KoefRear:=Link_ProcBufIn[4]*256+Link_ProcBufIn[5];
      Pcb_Test_BrPS_Val:=Link_ProcBufIn[6];
      EBS21_Status1:=Link_ProcBufIn[7];

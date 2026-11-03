@@ -4,7 +4,7 @@ object TestDSC: TTestDSC
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Test DSC'
-  ClientHeight = 609
+  ClientHeight = 618
   ClientWidth = 335
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -18,28 +18,28 @@ object TestDSC: TTestDSC
   TextHeight = 13
   object Label369: TLabel
     Left = 29
-    Top = 512
+    Top = 536
     Width = 6
     Height = 13
     Caption = '0'
   end
   object Label367: TLabel
     Left = 216
-    Top = 512
+    Top = 536
     Width = 19
     Height = 13
     Caption = 'max'
   end
   object Label370: TLabel
     Left = 93
-    Top = 512
+    Top = 536
     Width = 15
     Height = 13
     Caption = '-----'
   end
   object Button5: TButton
     Left = 136
-    Top = 566
+    Top = 584
     Width = 75
     Height = 25
     Caption = #1057#1073#1088#1086#1089
@@ -48,9 +48,9 @@ object TestDSC: TTestDSC
   end
   object GroupBox1: TGroupBox
     Left = 168
-    Top = 328
+    Top = 320
     Width = 155
-    Height = 169
+    Height = 167
     Caption = #1059#1087#1088#1072#1074#1083#1077#1085#1080#1077' '#1044#1042#1048#1043#1040#1058#1045#1051#1045#1052
     TabOrder = 1
     object GroupBox67: TGroupBox
@@ -107,9 +107,9 @@ object TestDSC: TTestDSC
   end
   object GroupBox2: TGroupBox
     Left = 8
-    Top = 376
+    Top = 368
     Width = 155
-    Height = 121
+    Height = 119
     Caption = #1059#1087#1088#1072#1074#1083#1077#1085#1080#1077' '#1056#1045#1058#1040#1056#1044#1045#1056#1054#1052
     TabOrder = 2
     object GroupBox70: TGroupBox
@@ -149,7 +149,7 @@ object TestDSC: TTestDSC
   end
   object GroupBox3: TGroupBox
     Left = 8
-    Top = 8
+    Top = 2
     Width = 188
     Height = 169
     Caption = 'Test PULS'
@@ -237,7 +237,7 @@ object TestDSC: TTestDSC
   end
   object GroupBox4: TGroupBox
     Left = 202
-    Top = 8
+    Top = 2
     Width = 124
     Height = 169
     Caption = 'Test Dif_Valve'
@@ -295,8 +295,8 @@ object TestDSC: TTestDSC
     end
   end
   object TrackBar2: TTrackBar
-    Left = 21
-    Top = 524
+    Left = 13
+    Top = 548
     Width = 221
     Height = 34
     Cursor = crHandPoint
@@ -310,7 +310,7 @@ object TestDSC: TTestDSC
   end
   object GroupBox8: TGroupBox
     Left = 8
-    Top = 178
+    Top = 172
     Width = 155
     Height = 49
     Caption = 'Modulator Test'
@@ -327,7 +327,7 @@ object TestDSC: TTestDSC
   end
   object GroupBox9: TGroupBox
     Left = 168
-    Top = 178
+    Top = 170
     Width = 158
     Height = 49
     Caption = 'PnevmaticTest'
@@ -344,7 +344,7 @@ object TestDSC: TTestDSC
   end
   object GroupBox10: TGroupBox
     Left = 8
-    Top = 226
+    Top = 220
     Width = 155
     Height = 49
     Caption = 'Break Front Test'
@@ -361,7 +361,7 @@ object TestDSC: TTestDSC
   end
   object GroupBox11: TGroupBox
     Left = 168
-    Top = 226
+    Top = 220
     Width = 158
     Height = 49
     Caption = 'Break RearTest'
@@ -378,7 +378,7 @@ object TestDSC: TTestDSC
   end
   object GroupBox12: TGroupBox
     Left = 8
-    Top = 274
+    Top = 268
     Width = 155
     Height = 49
     Caption = 'Hill Holder Test'
@@ -395,7 +395,7 @@ object TestDSC: TTestDSC
   end
   object GroupBox13: TGroupBox
     Left = 168
-    Top = 274
+    Top = 268
     Width = 158
     Height = 49
     Caption = 'Halt Brake Test'
@@ -412,7 +412,7 @@ object TestDSC: TTestDSC
   end
   object grp1: TGroupBox
     Left = 8
-    Top = 322
+    Top = 316
     Width = 155
     Height = 49
     Caption = 'XBR Test'
@@ -423,6 +423,40 @@ object TestDSC: TTestDSC
       Width = 75
       Height = 25
       Caption = #1042#1099#1082#1083#1102#1095#1077#1085
+      TabOrder = 0
+      OnClick = Button1Click
+    end
+  end
+  object GroupBox15: TGroupBox
+    Left = 168
+    Top = 486
+    Width = 153
+    Height = 47
+    Caption = 'Brake Only Axis    REAR'
+    TabOrder = 13
+    object btn1: TButton
+      Left = 42
+      Top = 14
+      Width = 75
+      Height = 25
+      Caption = #1042#1099#1082#1083#1102#1095#1077#1085#1086
+      TabOrder = 0
+      OnClick = Button1Click
+    end
+  end
+  object GroupBox16: TGroupBox
+    Left = 8
+    Top = 486
+    Width = 153
+    Height = 47
+    Caption = 'Brake Only Axis  FRONT'
+    TabOrder = 14
+    object btn2: TButton
+      Left = 38
+      Top = 14
+      Width = 75
+      Height = 25
+      Caption = #1042#1099#1082#1083#1102#1095#1077#1085#1086
       TabOrder = 0
       OnClick = Button1Click
     end

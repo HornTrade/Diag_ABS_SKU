@@ -429,8 +429,6 @@ type
     TabSheet20: TTabSheet;
     TabSheet21: TTabSheet;
     GroupBox53: TGroupBox;
-    CheckBox63: TCheckBox;
-    CheckBox82: TCheckBox;
     CheckBox83: TCheckBox;
     CheckBox85: TCheckBox;
     GroupBox54: TGroupBox;
@@ -1144,16 +1142,8 @@ type
     Label425: TLabel;
     TabSheet25: TTabSheet;
     GroupBox102: TGroupBox;
-    CheckBox106: TCheckBox;
     CheckBox228: TCheckBox;
     CheckBox243: TCheckBox;
-    GroupBox203: TGroupBox;
-    CheckBox247: TCheckBox;
-    CheckBox248: TCheckBox;
-    CheckBox249: TCheckBox;
-    CheckBox250: TCheckBox;
-    CheckBox251: TCheckBox;
-    CheckBox252: TCheckBox;
     GroupBox135: TGroupBox;
     Label270: TLabel;
     Label267: TLabel;
@@ -1209,11 +1199,6 @@ type
     RadioGroup9: TRadioGroup;
     CheckBox231: TCheckBox;
     Label452: TLabel;
-    GroupBox202: TGroupBox;
-    CheckBox245: TCheckBox;
-    CheckBox246: TCheckBox;
-    CheckBox256: TCheckBox;
-    CheckBox257: TCheckBox;
     Label586: TLabel;
     Label321: TLabel;
     Label585: TLabel;
@@ -1227,7 +1212,6 @@ type
     CheckBox56: TCheckBox;
     GroupBox211: TGroupBox;
     CheckBox261: TCheckBox;
-    CheckBox115: TCheckBox;
     CheckBox269: TCheckBox;
     CheckBox128: TCheckBox;
     CheckBox267: TCheckBox;
@@ -1291,7 +1275,6 @@ type
     CheckBox168: TCheckBox;
     CheckBox169: TCheckBox;
     CheckBox58: TCheckBox;
-    CheckBox275: TCheckBox;
     CheckBox277: TCheckBox;
     CheckBox278: TCheckBox;
     CheckBox279: TCheckBox;
@@ -1304,9 +1287,6 @@ type
     CheckBox280: TCheckBox;
     CheckBox281: TCheckBox;
     CheckBox148: TCheckBox;
-    CheckBox244: TCheckBox;
-    Label543: TLabel;
-    Edit347: TEdit;
     GroupBox50: TGroupBox;
     CheckBox159: TCheckBox;
     CheckBox149: TCheckBox;
@@ -1443,16 +1423,6 @@ type
     CheckBox171: TCheckBox;
     CheckBox178: TCheckBox;
     Edit246: TEdit;
-    GroupBox103: TGroupBox;
-    CheckBox264: TCheckBox;
-    CheckBox265: TCheckBox;
-    CheckBox266: TCheckBox;
-    CheckBox172: TCheckBox;
-    CheckBox236: TCheckBox;
-    GroupBox97: TGroupBox;
-    CheckBox254: TCheckBox;
-    CheckBox253: TCheckBox;
-    CheckBox57: TCheckBox;
     RadioGroup7: TRadioGroup;
     GroupBox158: TGroupBox;
     GroupBox159: TGroupBox;
@@ -1476,16 +1446,12 @@ type
     CheckBox224: TCheckBox;
     RadioGroup8: TRadioGroup;
     GroupBox183: TGroupBox;
-    Label297: TLabel;
     CheckBox219: TCheckBox;
     CheckBox184: TCheckBox;
     Edit304: TEdit;
     Edit316: TEdit;
     CheckBox287: TCheckBox;
     Edit321: TEdit;
-    Edit318: TEdit;
-    CheckBox182: TCheckBox;
-    CheckBox142: TCheckBox;
     Edit317: TEdit;
     GroupBox184: TGroupBox;
     Label556: TLabel;
@@ -1574,7 +1540,6 @@ type
     Label600: TLabel;
     Label541: TLabel;
     StopLight: TSpeedButton;
-    CheckBox255: TCheckBox;
     Label567: TLabel;
     Edit116: TEdit;
     CheckBox95: TCheckBox;
@@ -1618,15 +1583,6 @@ type
     Edit162: TEdit;
     TabSheet28: TTabSheet;
     GroupBox31: TGroupBox;
-    CheckBox26: TCheckBox;
-    CheckBox35: TCheckBox;
-    CheckBox109: TCheckBox;
-    CheckBox111: TCheckBox;
-    CheckBox122: TCheckBox;
-    CheckBox133: TCheckBox;
-    GroupBox45: TGroupBox;
-    CheckBox41: TCheckBox;
-    GroupBox217: TGroupBox;
     Label325: TLabel;
     Button72: TButton;
     Label607: TLabel;
@@ -1641,10 +1597,6 @@ type
     GroupBox215: TGroupBox;
     Edit87: TEdit;
     Button48: TButton;
-    GroupBox220: TGroupBox;
-    Edit142: TEdit;
-    Label246: TLabel;
-    RadioGroup12: TRadioGroup;
     Edit373: TEdit;
     GroupBox149: TGroupBox;
     Label367: TLabel;
@@ -1672,11 +1624,6 @@ type
     Edit332: TEdit;
     Edit333: TEdit;
     Label577: TLabel;
-    GroupBox199: TGroupBox;
-    Label566: TLabel;
-    CheckBox237: TCheckBox;
-    Edit336: TEdit;
-    Edit342: TEdit;
     Button74: TButton;
     Button76: TButton;
     TabSheet29: TTabSheet;
@@ -1757,15 +1704,9 @@ type
     chk1: TCheckBox;
     Edit396: TEdit;
     Edit397: TEdit;
-    GroupBox177: TGroupBox;
-    CheckBox304: TCheckBox;
     GroupBox221: TGroupBox;
     HaltBrake: TSpeedButton;
     Label614: TLabel;
-    CheckBox305: TCheckBox;
-    CheckBox306: TCheckBox;
-    GroupBox222: TGroupBox;
-    CheckBox307: TCheckBox;
     GroupBox223: TGroupBox;
     Label127: TLabel;
     Edit287: TEdit;
@@ -2120,7 +2061,6 @@ type
     CheckBox351: TCheckBox;
     CheckBox352: TCheckBox;
     CheckBox353: TCheckBox;
-    CheckBox262: TCheckBox;
     Edit459: TEdit;
     Edit460: TEdit;
     Label698: TLabel;
@@ -2128,6 +2068,80 @@ type
     CheckBox151: TCheckBox;
     Label700: TLabel;
     Edit461: TEdit;
+    CheckBox26: TCheckBox;
+    CheckBox35: TCheckBox;
+    GroupBox1120: TGroupBox;
+    CheckBox182: TCheckBox;
+    Edit318: TEdit;
+    CheckBox142: TCheckBox;
+    GroupBox1121: TGroupBox;
+    CheckBox354: TCheckBox;
+    btn_GD1: TSpeedButton;
+    CheckBox355: TCheckBox;
+    btn_GD2: TSpeedButton;
+    rg4: TRadioGroup;
+    GroupBox1122: TGroupBox;
+    CheckBox357: TCheckBox;
+    CheckBox82: TCheckBox;
+    GroupBox1124: TGroupBox;
+    CheckBox247: TCheckBox;
+    CheckBox248: TCheckBox;
+    CheckBox249: TCheckBox;
+    CheckBox250: TCheckBox;
+    CheckBox251: TCheckBox;
+    CheckBox252: TCheckBox;
+    CheckBox255: TCheckBox;
+    CheckBox262: TCheckBox;
+    GroupBox1125: TGroupBox;
+    Label246: TLabel;
+    Edit142: TEdit;
+    rg5: TRadioGroup;
+    CheckBox106: TCheckBox;
+    CheckBox115: TCheckBox;
+    CheckBox63: TCheckBox;
+    CheckBox109: TCheckBox;
+    CheckBox122: TCheckBox;
+    CheckBox111: TCheckBox;
+    Label297: TLabel;
+    Edit463: TEdit;
+    Label701: TLabel;
+    Edit464: TEdit;
+    GroupBox1126: TGroupBox;
+    Label543: TLabel;
+    CheckBox245: TCheckBox;
+    CheckBox246: TCheckBox;
+    CheckBox275: TCheckBox;
+    CheckBox244: TCheckBox;
+    Edit347: TEdit;
+    GroupBox1127: TGroupBox;
+    CheckBox254: TCheckBox;
+    CheckBox253: TCheckBox;
+    CheckBox57: TCheckBox;
+    GroupBox177: TGroupBox;
+    CheckBox304: TCheckBox;
+    CheckBox305: TCheckBox;
+    CheckBox306: TCheckBox;
+    GroupBox199: TGroupBox;
+    Label566: TLabel;
+    CheckBox237: TCheckBox;
+    Edit342: TEdit;
+    GroupBox1128: TGroupBox;
+    CheckBox307: TCheckBox;
+    Edit462: TEdit;
+    Label702: TLabel;
+    GroupBox1123: TGroupBox;
+    CheckBox257: TCheckBox;
+    CheckBox256: TCheckBox;
+    Edit336: TEdit;
+    Label703: TLabel;
+    CheckBox41: TCheckBox;
+    CheckBox264: TCheckBox;
+    GroupBox103: TGroupBox;
+    CheckBox265: TCheckBox;
+    CheckBox266: TCheckBox;
+    CheckBox172: TCheckBox;
+    CheckBox236: TCheckBox;
+    CheckBox133: TCheckBox;
 
     procedure FormCreate(Sender: TObject);
     procedure BtnQuitClick(Sender: TObject);
@@ -2313,7 +2327,7 @@ type
     procedure Button71Click(Sender: TObject);
     procedure Button72Click(Sender: TObject);
     procedure Button73Click(Sender: TObject);
-    procedure RadioGroup12Click(Sender: TObject);
+    procedure rg5Click(Sender: TObject);
     procedure Test2Click(Sender: TObject);
     procedure UpGradeClick(Sender: TObject);
     procedure Edit378DblClick(Sender: TObject);
@@ -2386,6 +2400,11 @@ type
       var CanSelect: Boolean);
     procedure rg3Click(Sender: TObject);
     procedure Label34DblClick(Sender: TObject);
+    procedure btn_GD1Click(Sender: TObject);
+    procedure btn_GD2Click(Sender: TObject);
+    procedure CheckBox354Click(Sender: TObject);
+    procedure CheckBox355Click(Sender: TObject);
+    procedure rg4Click(Sender: TObject);
 
   private
     { Private declarations }
@@ -2609,7 +2628,8 @@ var
    Fl_TabSheet8Show, Fl_ReadFPROT, Fl_VarMDT,
    Fl_BreakFront_ON, Fl_BreakRear_ON, clrFl_BreakRear_ON,
    Fl_HaltBrake_ON, clrFl_HaltBrake_ON, Fl_XBR_ON, clrFl_XBR_ON,
-   Fl_Prop, Fl_Prop_On, Fl_MAN_Poz: boolean;
+   Fl_Prop, Fl_Prop_On, Fl_MAN_Poz,
+   Fl_BrakeFront_Only, Fl_BrakeRear_Only, clrFl_Brake_Only: boolean;
 
    DSC_Akker, DSC_OmegaZ, DSC_AccY, DSC_AccX : byte;
    AGS_Buf_Adr, Road_Sel_Adr, TestPoint_Sel_Adr:word;
@@ -2631,7 +2651,7 @@ var
    Trailer_Press_2R, Trailer_Press_3L, Trailer_Press_3R,
    FrontInPress, RearInPress, EBL_REG_Koef, Load_Koef,
    EBS25_Cnt, EBS25_Status5, CANT_Mode, Trailer_Press,
-   SelfTun_Break_KP, Brake_Time1, Brake_Deccel1,
+   SelfTun_Break_KP, Brake_Time1,
    SelfTun_Engine_Loss_K1, SelfTun_Engine_Loss_K2,
    SelfTun_Engine_PTxx, EC1_TorquePoint1, EC1_TorquePoint5,
    FL_Delay_Exh, FL_Delay_Pump, FR_Delay_Exh, FR_Delay_Pump,
@@ -2650,7 +2670,8 @@ var
    RearAxle_Load, CAN_TCO1_Speed, CAN_TCO1_Taxo, CAN_AmbientAir,
    TCO_Gear_Koef, Trailer_Speed, Engine_Torque_Nm, Below_SensPress,
    SelfTun_PeakTorque, Engine_TorqueLoss, EC1_RefTorque, CAN_Gear_OutTaxo,
-   EC1_TaxoPoint1, EC1_TaxoPoint2, EC1_PeakTorque, PGN_FF22_Taxo : word;
+   EC1_TaxoPoint1, EC1_TaxoPoint2, EC1_PeakTorque, PGN_FF22_Taxo,
+   Brake_Deccel1 : word;
 
    CAN_HDRH_Distance :dword;
    Find_EEC1, Find_EEC2, Find_CCVS, Find_TCO1,
@@ -2729,7 +2750,8 @@ var
    BINBuff:array[0..131072] of Byte;
    Size_File, Size_Buf,LastByte, ClrErr_Cnt, Size_SectorSTM,
    Size_FlashSTM: integer;
-   Fl_ProgSTM,Fl_ComThread : boolean;
+   Fl_ProgSTM,Fl_ComThread,
+   ProgSTM_Checked, ProgGD1_Checked, ProgGD2_Checked : boolean;
    ProgramSTM_Start, ProgramSTM_End, ProgramSTM_Size : integer;
    FPROT_STM, TRIM_STM :Byte;
    CRC_pgm_MC3: array[0..4] of Byte;
@@ -2783,7 +2805,7 @@ var
    LBool : LongBool;
 
    ProcessInfo: TProcessInformation;
-   ST_LINK_SN, BDM_PA_SN, BDM_DZ_SN : String;
+   ST_LINK_SN, BDM_PA_SN, BDM_DZ_SN,Path_STLINK_CLI : String;
    PCh, Make_Sound, Make_Sound_Ok, Make_Sound_Err: PChar;
 
   // UpGrade_Port_Num:Byte;
@@ -5578,6 +5600,15 @@ begin
     Form1.Edit431.Text:=SAS_UpGrade_File;
     Form1.rg2.ItemIndex:=StrToInt(DiagIni.ReadString('UpGrade_Serial','Programmator','0'));
 
+   Form1.rg4.ItemIndex:=StrToInt(DiagIni.ReadString('UpGrade_Serial','ProgrammatorNEW','0'));
+   Path_STLINK_CLI:=DiagIni.ReadString('UpGrade_Serial','Path_ST-LINK_CLI','0');
+   Form1.CheckBox351.Checked:=DiagIni.ReadBool('UpGrade_Serial','ProgSTM_Checked',False);
+   ProgSTM_Checked:=Form1.CheckBox354.Checked;
+   Form1.CheckBox354.Checked:=DiagIni.ReadBool('UpGrade_Serial','ProgGD1_Checked',False);
+   ProgGD1_Checked:=Form1.CheckBox354.Checked;
+   Form1.CheckBox355.Checked:=DiagIni.ReadBool('UpGrade_Serial','ProgGD2_Checked',False);
+   ProgGD2_Checked:=Form1.CheckBox355.Checked;
+   
    Form1.Label134.Caption:=Prog_File;
    Form1.Label327.Caption:=ProgSTM_File;
    Form1.Label664.Caption:=ProgSTM2_File;
@@ -5634,6 +5665,11 @@ begin
    Form1.Edit89.Text:=IntToStr(DiagIni.ReadInteger('OSC_Address','Osc_Adr_18',0));
    Form1.Edit90.Text:=IntToStr(DiagIni.ReadInteger('OSC_Address','Osc_Adr_19',0));
    Form1.Edit91.Text:=IntToStr(DiagIni.ReadInteger('OSC_Address','Osc_Adr_20',0));
+   Form1.Edit452.Text:=IntToStr(DiagIni.ReadInteger('OSC_Address','Osc_Adr_21',0));
+   Form1.Edit453.Text:=IntToStr(DiagIni.ReadInteger('OSC_Address','Osc_Adr_22',0));
+   Form1.Edit457.Text:=IntToStr(DiagIni.ReadInteger('OSC_Address','Osc_Adr_23',0));
+   Form1.Edit458.Text:=IntToStr(DiagIni.ReadInteger('OSC_Address','Osc_Adr_24',0));
+
    Form1.Edit100.Text:=IntToStr(DiagIni.ReadInteger('Sel_OSC','Sel_OSC_1',0));
    Form1.Edit427.Text:=IntToStr(DiagIni.ReadInteger('Sel_OSC','Sel_TestPoint',0));
    Form1.Edit418.Text:=IntToStr(DiagIni.ReadInteger('Sel_OSC','Sel_RoadVAR',0));
@@ -5666,6 +5702,10 @@ begin
    Form1.CheckBox101.Checked:=DiagIni.ReadBool('OSC_Enable','Enable18',true);
    Form1.CheckBox102.Checked:=DiagIni.ReadBool('OSC_Enable','Enable19',true);
    Form1.CheckBox103.Checked:=DiagIni.ReadBool('OSC_Enable','Enable20',true);
+   Form1.CheckBox341.Checked:=DiagIni.ReadBool('OSC_Enable','Enable21',true);
+   Form1.CheckBox342.Checked:=DiagIni.ReadBool('OSC_Enable','Enable22',true);
+   Form1.CheckBox343.Checked:=DiagIni.ReadBool('OSC_Enable','Enable23',true);
+   Form1.CheckBox346.Checked:=DiagIni.ReadBool('OSC_Enable','Enable24',true);
 
    Form1.Label56.Font.Color:=DiagIni.ReadInteger('OSC_Color','Color_1',0);
    Form1.Label57.Font.Color:=DiagIni.ReadInteger('OSC_Color','Color_2',0);
@@ -5687,6 +5727,10 @@ begin
    Form1.Label280.Font.Color:=DiagIni.ReadInteger('OSC_Color','Color_18',0);
    Form1.Label281.Font.Color:=DiagIni.ReadInteger('OSC_Color','Color_19',0);
    Form1.Label282.Font.Color:=DiagIni.ReadInteger('OSC_Color','Color_20',0);
+   Form1.Label687.Font.Color:=DiagIni.ReadInteger('OSC_Color','Color_21',0);
+   Form1.Label689.Font.Color:=DiagIni.ReadInteger('OSC_Color','Color_22',0);
+   Form1.Label690.Font.Color:=DiagIni.ReadInteger('OSC_Color','Color_23',0);
+   Form1.Label691.Font.Color:=DiagIni.ReadInteger('OSC_Color','Color_24',0);
 
    Form1.CheckBox13.Font.Color:=Form1.Label56.Font.Color;
    Form1.CheckBox14.Font.Color:=Form1.Label57.Font.Color;
@@ -5707,7 +5751,11 @@ begin
    Form1.CheckBox96.Font.Color:=Form1.Label279.Font.Color;
    Form1.CheckBox97.Font.Color:=Form1.Label280.Font.Color;
    Form1.CheckBox98.Font.Color:=Form1.Label281.Font.Color;
-   Form1.CheckBox98.Font.Color:=Form1.Label282.Font.Color;
+   Form1.CheckBox99.Font.Color:=Form1.Label282.Font.Color;
+   Form1.CheckBox347.Font.Color:=Form1.Label687.Font.Color;
+   Form1.CheckBox348.Font.Color:=Form1.Label689.Font.Color;
+   Form1.CheckBox349.Font.Color:=Form1.Label690.Font.Color;
+   Form1.CheckBox350.Font.Color:=Form1.Label691.Font.Color;
 
    Form1.CheckBox13.Checked:=DiagIni.ReadBool('ROAD_Enable','Enable1',true);
    Form1.CheckBox14.Checked:=DiagIni.ReadBool('ROAD_Enable','Enable2',true);
@@ -5729,6 +5777,11 @@ begin
    Form1.CheckBox97.Checked:=DiagIni.ReadBool('ROAD_Enable','Enable18',true);
    Form1.CheckBox98.Checked:=DiagIni.ReadBool('ROAD_Enable','Enable19',true);
    Form1.CheckBox99.Checked:=DiagIni.ReadBool('ROAD_Enable','Enable20',true);
+
+   Form1.CheckBox347.Checked:=DiagIni.ReadBool('ROAD_Enable','Enable21',true);
+   Form1.CheckBox348.Checked:=DiagIni.ReadBool('ROAD_Enable','Enable22',true);
+   Form1.CheckBox349.Checked:=DiagIni.ReadBool('ROAD_Enable','Enable23',true);
+   Form1.CheckBox350.Checked:=DiagIni.ReadBool('ROAD_Enable','Enable24',true);
 
    RoadDir:=DiagIni.ReadString('RoadDir','RoadDir',IniPath);
    ProtDir:=DiagIni.ReadString('ProtDir','ProtDir',IniPath);
@@ -5838,6 +5891,11 @@ begin
    DiagIni.WriteInteger('OSC_Address','Osc_Adr_18',StrToInt(Form1.Edit89.Text));
    DiagIni.WriteInteger('OSC_Address','Osc_Adr_19',StrToInt(Form1.Edit90.Text));
    DiagIni.WriteInteger('OSC_Address','Osc_Adr_20',StrToInt(Form1.Edit91.Text));
+   DiagIni.WriteInteger('OSC_Address','Osc_Adr_21',StrToInt(Form1.Edit452.Text));
+   DiagIni.WriteInteger('OSC_Address','Osc_Adr_22',StrToInt(Form1.Edit453.Text));
+   DiagIni.WriteInteger('OSC_Address','Osc_Adr_23',StrToInt(Form1.Edit457.Text));
+   DiagIni.WriteInteger('OSC_Address','Osc_Adr_24',StrToInt(Form1.Edit458.Text));
+
    DiagIni.WriteInteger('Sel_OSC','Sel_OSC_1',StrToInt(Form1.Edit100.Text));
    DiagIni.WriteInteger('Sel_OSC','Sel_TestPoint',StrToInt(Form1.Edit427.Text));
    DiagIni.WriteInteger('Sel_OSC','Sel_RoadVAR',StrToInt(Form1.Edit418.Text));
@@ -5865,6 +5923,10 @@ begin
    DiagIni.WriteBool('OSC_Enable','Enable18',Form1.CheckBox101.Checked);
    DiagIni.WriteBool('OSC_Enable','Enable19',Form1.CheckBox102.Checked);
    DiagIni.WriteBool('OSC_Enable','Enable20',Form1.CheckBox103.Checked);
+   DiagIni.WriteBool('OSC_Enable','Enable21',Form1.CheckBox341.Checked);
+   DiagIni.WriteBool('OSC_Enable','Enable22',Form1.CheckBox342.Checked);
+   DiagIni.WriteBool('OSC_Enable','Enable23',Form1.CheckBox343.Checked);
+   DiagIni.WriteBool('OSC_Enable','Enable24',Form1.CheckBox346.Checked);
 
    DiagIni.WriteInteger('OSC_Color','Color_1',Form1.Label56.Font.Color);
    DiagIni.WriteInteger('OSC_Color','Color_2',Form1.Label57.Font.Color);
@@ -5886,6 +5948,10 @@ begin
    DiagIni.WriteInteger('OSC_Color','Color_18',Form1.Label280.Font.Color);
    DiagIni.WriteInteger('OSC_Color','Color_19',Form1.Label281.Font.Color);
    DiagIni.WriteInteger('OSC_Color','Color_20',Form1.Label282.Font.Color);
+   DiagIni.WriteInteger('OSC_Color','Color_21',Form1.Label687.Font.Color);
+   DiagIni.WriteInteger('OSC_Color','Color_22',Form1.Label689.Font.Color);
+   DiagIni.WriteInteger('OSC_Color','Color_23',Form1.Label690.Font.Color);
+   DiagIni.WriteInteger('OSC_Color','Color_24',Form1.Label691.Font.Color);
 
    DiagIni.WriteBool('ROAD_Enable','Enable1',Form1.CheckBox13.Checked);
    DiagIni.WriteBool('ROAD_Enable','Enable2',Form1.CheckBox14.Checked);
@@ -5907,6 +5973,10 @@ begin
    DiagIni.WriteBool('ROAD_Enable','Enable18',Form1.CheckBox97.Checked);
    DiagIni.WriteBool('ROAD_Enable','Enable19',Form1.CheckBox98.Checked);
    DiagIni.WriteBool('ROAD_Enable','Enable20',Form1.CheckBox99.Checked);
+   DiagIni.WriteBool('ROAD_Enable','Enable21',Form1.CheckBox347.Checked);
+   DiagIni.WriteBool('ROAD_Enable','Enable22',Form1.CheckBox348.Checked);
+   DiagIni.WriteBool('ROAD_Enable','Enable23',Form1.CheckBox349.Checked);
+   DiagIni.WriteBool('ROAD_Enable','Enable24',Form1.CheckBox350.Checked);
 
    DiagIni.WriteBool('SEN_OSC_Enable','Enable1',Form1.CheckBox27.Checked);
    DiagIni.WriteBool('SEN_OSC_Enable','Enable2',Form1.CheckBox28.Checked);
@@ -7109,6 +7179,7 @@ end;
 procedure  FlashUnProtected;
 begin
 // чтение последний сектор EPROM DZ
+   if ComBaudrate < 115200 then begin
    Fl_EPROM_FPROT:=false;
    FormISO.ReadEPROM_FPROT;
    repeat Application.ProcessMessages until Fl_EPROM_FPROT;
@@ -7133,10 +7204,12 @@ begin
    begin
        Fl_FlashProtect_Compleet:=true;
    end;
+   end;
 end;
 
 procedure  FlashProtected;
 begin
+  if ComBaudrate < 115200 then begin
 //установка защиты Flash
    Fl_EPROM_FPROT:=false;
    Flash_Protected:=true;
@@ -7153,6 +7226,7 @@ begin
    if (FPROT = $D8) then Fl_FlashProtect_Compleet:=true
    else Fl_FlashProtect_Compleet:=false;
    Fl_ResetMCU:=false;
+  end;
 end;
 
 procedure TForm1.Dump_SKU_CFG;
@@ -7324,9 +7398,11 @@ begin
    end;
 
 // ASR Управление тормозами включено
+// ASR_Two_Engine
      if  not CheckBox26.Checked then DumpMOT[7]:=DumpMOT[7] and 239
                                 else DumpMOT[7]:=DumpMOT[7] or 16;
 // ASR Управление двигателем включено
+// измерительные датчки давления
      if  not CheckBox35.Checked then DumpMOT[7]:=DumpMOT[7] and 223
                                 else DumpMOT[7]:=DumpMOT[7] or 32;
 // DBREnable
@@ -7607,7 +7683,7 @@ begin
      if CheckBox110.Checked then DumpMOT[53]:=DumpMOT[53] or 16;  // Зависимость Load  Mu Road
      if CheckBox111.Checked then DumpMOT[53]:=DumpMOT[53] or 32;  // ASR_Torq_Turn
      if CheckBox112.Checked then DumpMOT[53]:=DumpMOT[53] or 64;  // ROP_notMIR
-     if CheckBox122.Checked then DumpMOT[53]:=DumpMOT[53] or 128; // ASR_Taxo_Enable
+     if CheckBox122.Checked then DumpMOT[53]:=DumpMOT[53] or 128; // MIR Rear  Enable
 
      DumpMOT[45]:=StrToInt(Edit51.Text);
      DumpMOT[46]:= Round(StrToFloat(Form1.Edit52.Text)*20);
@@ -7659,6 +7735,9 @@ begin
      if not CheckBox73.Checked and
         not CheckBox81.Checked then
         CheckBox299.Checked := false;
+     if CheckBox80.Checked then
+           CheckBox357.Checked := true
+     else  CheckBox357.Checked := false;
 
 // Car_CG_A
      A_base:=StrToFloat(Form1.Edit53.Text);          //CG A в метрах
@@ -8215,7 +8294,7 @@ begin
    DumpMOT[283]:= StrToInt(Form1.Edit302.Text);
 // ASR Speed On
    DumpMOT[284]:= StrToInt(Form1.Edit303.Text);
-// ABS.CFG.SleepMax
+// ABS.CFG.SleepExh
    DumpMOT[285]:= Round(StrToFloat(Edit304.Text)*10);
 // Fault Maska
    DumpMOT[286]:= 0;
@@ -8281,7 +8360,7 @@ begin
 // Ph6_ddP_Tip2
    if CheckBox226.Checked then DumpMOT[290]:=DumpMOT[290] or 128;
 
-// ProM            km/h
+// ProM Rear           km/h
    DumpMOT[291]:= Round(StrToFloat(Edit318.Text)*32);
 // High Mu
    DumpMOT[292]:= Round(StrToFloat(Edit317.Text)*9.81*16);
@@ -8527,7 +8606,7 @@ begin
 //DSC_Config_24
    DumpMOT[340]:= 0;
 // Приборная панель
-   Case RadioGroup12.ItemIndex of
+   Case rg5.ItemIndex of
        0: DumpMOT[340]:=DumpMOT[340] or 0; //
        1: DumpMOT[340]:=DumpMOT[340] or 1;//
        2: DumpMOT[340]:=DumpMOT[340] or 2;//
@@ -8602,6 +8681,14 @@ begin
 //------(DumpMOT[360]);
     DumpMOT[360]:= 1;
     DumpMOT[361] :=ADRE_Lot_M_V8; //Lot
+
+// HillHold_Pdes atm
+   DumpMOT[362]:= Round(StrToFloat(Edit462.Text)*20);
+
+// ABS.CFG.SleepEnd R
+   DumpMOT[363]:= Round(StrToFloat(Edit463.Text)*10);
+// ABS.CFG.SleepEnd F
+   DumpMOT[364]:= Round(StrToFloat(Edit464.Text)*10);
 
 // KSUM
      CheckSUM_DumpMOT;
@@ -8919,10 +9006,11 @@ begin
    if (DumpMOT[7] and 4)=0      then RadioGroup4.ItemIndex:=2
    else if (DumpMOT[7] and 8)=8 then RadioGroup4.ItemIndex:=1
                                 else RadioGroup4.ItemIndex:=0;
-
+//ASR_Two_Engine
    if (DumpMOT[7] and 16)=16 then CheckBox26.Checked:=true
                              else CheckBox26.Checked:=false;
    PressEnable:=CheckBox26.Checked;
+// измерительные датчки давления
    if (DumpMOT[7] and 32)=32 then CheckBox35.Checked:=true
                              else CheckBox35.Checked:=false;
    MotorEnable:=CheckBox35.Checked;
@@ -9268,6 +9356,10 @@ begin
         CheckBox81.Checked then
         CheckBox299.Checked := true
     else CheckBox299.Checked := false;
+
+    if CheckBox80.Checked then
+         CheckBox357.Checked := true
+    else CheckBox357.Checked := false;
 
 // Car_CG_A
 //CG A в метрах
@@ -9895,7 +9987,7 @@ begin
    Form1.Edit302.Text:=IntToStr(DumpMOT[283]);
 // ASR Speed On
    Form1.Edit303.Text:=IntToStr(DumpMOT[284]);
-// ABS.CFG.SleepMax
+// ABS.CFG.SleepExh
    Form1.Edit304.Text:=FloatToStrF(DumpMOT[285]/10,ffFixed,4,1);
 // Fault Maska
 //   Form1.Edit314.Text:=IntToStr(DumpMOT[286]);
@@ -10281,7 +10373,7 @@ begin
 
 //DSC_Config_24
 // Приборная панель
-   RadioGroup12.ItemIndex:= (DumpMOT[340] and 3);
+   rg5.ItemIndex:= (DumpMOT[340] and 3);
 // K Line Blink Code
    if (DumpMOT[340] and 8)=8 then CheckBox300.Checked:=true
                              else CheckBox300.Checked:=false;
@@ -10361,6 +10453,14 @@ begin
      Insert(Chr(Ord(Vehicle_Modif_Data[i])), Vehicle_Modification, i);
    end;
 //------(DumpMOT[360]);
+
+// ProM  Front   km/h
+   Form1.Edit462.Text:=FloatToStrF(DumpMOT[362]/20,ffFixed,4,1);
+
+// ABS.CFG.SleepEnd R
+   Form1.Edit463.Text:=FloatToStrF(DumpMOT[363]/10,ffFixed,4,1);
+// ABS.CFG.SleepEnd F
+   Form1.Edit464.Text:=FloatToStrF(DumpMOT[364]/10,ffFixed,4,1);
 
 end;
 
@@ -11305,6 +11405,8 @@ begin
             Fl_PnevmoTest_ON:= false;
             Fl_BreakFront_ON:= false;
             Fl_BreakRear_ON:= false;
+            Fl_BrakeFront_Only:= false;
+            Fl_BrakeRear_Only:= false;
 end;
 
 procedure TForm1.DSC_TestEnd;
@@ -11475,6 +11577,28 @@ begin
              TestDSC.Prop.Caption := 'Выключен';
         end;
 
+        if Fl_BrakeFront_Only then
+        begin
+             TestDSC.GroupBox15.Color :=clRed;
+             TestDSC.btn1.Caption := 'Включен';
+        end
+        else
+        begin
+             TestDSC.GroupBox15.Color :=clBtnFace;
+             TestDSC.btn1.Caption := 'Выключен';
+        end;
+
+        if Fl_BrakeRear_Only then
+        begin
+             TestDSC.GroupBox16.Color :=clRed;
+             TestDSC.btn2.Caption := 'Включен';
+        end
+        else
+        begin
+             TestDSC.GroupBox16.Color :=clBtnFace;
+             TestDSC.btn2.Caption := 'Выключен';
+        end;
+
 //Test Dif_Valve DSCPulsPress_Com
         if DSCPulsPress_Com =0 then
         begin  // не было команд Puls
@@ -11528,7 +11652,14 @@ begin
           if Fl_HillHolder_ON then DSCPulsPress_Com:=12;
           if Fl_HaltBrake_ON then DSCPulsPress_Com:=13;
           if Fl_XBR_ON then DSCPulsPress_Com:=14;
+          if Fl_BrakeFront_Only then DSCPulsPress_Com:=19;
+          if Fl_BrakeRear_Only then DSCPulsPress_Com:=20;
 
+          if clrFl_Brake_Only then
+          begin
+               clrFl_Brake_Only:= false;
+               DSCPulsPress_Com:=21;
+          end;
           if clrFl_BreakFront_ON then
           begin
                clrFl_BreakFront_ON:= false;
@@ -12314,7 +12445,10 @@ begin
       // Параметры торможения
       // Deccel[1]
       // размерность Dec 0,05m/c2 - 1msb            20 не менять !!
-      Form1.Edit242.Text:=FloatToStrF(Brake_Deccel1/20,ffFixed,4,2);
+      if Tip_Block < 8 then
+      Form1.Edit242.Text:=FloatToStrF(Brake_Deccel1/20,ffFixed,4,2)
+      else
+      Form1.Edit242.Text:=FloatToStrF(Brake_Deccel1/51200,ffFixed,4,2);
       // Time[1]
       // размерность Time 0,05c - 1msb
       Form1.Edit241.Text:=FloatToStrF(Brake_Time1/20,ffFixed,4,2);
@@ -14137,8 +14271,8 @@ begin
              CheckBox241.Caption:='Знак  +  Koef  dP(P)'
        else  CheckBox241.Caption:='Знак  --  Koef  dP(P)';
        if CheckBox257.Checked then
-             CheckBox257.Caption:='Emergency_Brake 6 m/c2'
-       else  CheckBox257.Caption:='Emergency_Brake 4 m/c2';
+             CheckBox257.Caption:='6 m/c2'
+       else  CheckBox257.Caption:='4 m/c2';
        if CheckBox136.Checked then
              begin
              CheckBox136.Caption:='Press (Load_Fz)';
@@ -14272,6 +14406,20 @@ begin
              CheckBox81.Checked:= false;
      //        DumpMOT[58]:=DumpMOT[58] and 63;
        end;
+       // Сенсор SAS
+       if CheckBox357.Checked then
+       begin
+             CheckBox357.Caption:='Разъем Вверх';
+             CheckBox357.Color:=clBtnFace;
+             CheckBox80.Checked:= true;
+       end
+       else
+       begin
+             CheckBox357.Caption:='Разъем Вниз';
+             CheckBox357.Color:=clAqua;
+             CheckBox80.Checked:= false;
+       end;
+
        if CheckBox302.Checked then
              CheckBox302.Caption:='BPS на Ускорительном клапане'
        else  CheckBox302.Caption:='BPS на Тормозном кране';
@@ -14936,9 +15084,9 @@ begin
      GroupBox151.Visible:=false;
 end;
 
-procedure TForm1.RadioGroup12Click(Sender: TObject);
+procedure TForm1.rg5Click(Sender: TObject);
 begin
-  Case RadioGroup12.ItemIndex of
+  Case rg5.ItemIndex of
        0: Form1.Edit142.Text:='33'; //
        1: Form1.Edit142.Text:='39'; //
        2: Form1.Edit142.Text:='33'; //
@@ -16320,8 +16468,8 @@ begin
   if CheckBox49.Checked then TestString2:='CAN'
                          else TestString2:='   ';
   Word_Row(R+25, 'Электронный Тахограф с CAN',TestString,TestString2);
-  Word_Row(R+26, 'Приборная панель',RadioGroup12.Items.Strings
-                                   [RadioGroup12.ItemIndex],'');
+  Word_Row(R+26, 'Приборная панель',rg5.Items.Strings
+                                   [rg5.ItemIndex],'');
   Word_Row(R+27, 'Переключатель ABS OffRoad',RadioGroup2.Items.Strings
                                             [RadioGroup2.ItemIndex],'');
   Word_Row(R+28, 'Переключатель ASR VDC',RadioGroup3.Items.Strings
@@ -17355,7 +17503,20 @@ var
     Result_PA: Cardinal;
     Cnt_Process_PA: DWORD;
 
-    Compleet_STM, Compleet_DZ, Compleet_PA:Boolean;
+    FileName_GD1: string;
+    StartupInfo_GD1: TStartupInfo;
+    ProcessInfo_GD1: TProcessInformation;
+    Result_GD1: Cardinal;
+    Cnt_Process_GD1: DWORD;
+
+    FileName_GD2: string;
+    StartupInfo_GD2: TStartupInfo;
+    ProcessInfo_GD2: TProcessInformation;
+    Result_GD2: Cardinal;
+    Cnt_Process_GD2: DWORD;
+
+    Compleet_STM, Compleet_DZ, Compleet_PA,
+    Compleet_GD1, Compleet_GD2 :Boolean;
     Time_Out: WORD;
 Label Label_End;
 begin
@@ -17394,6 +17555,8 @@ begin
     Compleet_PA:= False;
     end;
     //-----------DZ-------------
+    if Form1.CheckBox352.Checked then
+    begin
     Bin:= ProgDZ_File;
   //  Com:=' -bdm=0002 -target=HCS08 -vdd=5V -device=MC9S08DZ60 -nvloc=FFAE  -trim=35.25 -securityValue=7E -program -verify '+Bin;
   //  Com:=' -bdm=0002 -target=HCS08 -device=MC9S08DZ60  -eraseMass -securityValue=7E -program -verify '+Bin;
@@ -17423,8 +17586,11 @@ begin
     Result_DZ:=WaitForInputIdle(ProcessInfo_PA.hProcess, 100);
     Cnt_Process_DZ:=0;
     Compleet_DZ:= False;
+    end;
 
     //-----------STM-------------
+    if Form1.CheckBox351.Checked then
+    begin
     Path:= '"C:\Program Files (x86)\STMicroelectronics\STM32 ST-LINK Utility\ST-LINK Utility\ST-LINK_CLI.exe"';
     Bin:= ProgSTM_File;
     Case Form1.rg2.ItemIndex of
@@ -17453,6 +17619,73 @@ begin
     Result_STM:=WaitForInputIdle(ProcessInfo_STM.hProcess, 100);
     Cnt_Process_STM:=0;
     Compleet_STM:= False;
+    end;
+
+    //-----------GD1-------------
+    if Form1.CheckBox354.Checked then
+    begin
+    Path:= '"'+Path_STLINK_CLI+'\STM32 ST-LINK Utility\ST-LINK Utility\ST-LINK_CLI.exe"';
+    Bin:= ProgSTM_File;
+    Case Form1.rg4.ItemIndex of
+       0: Com:=' -c  SN=39FF72065041393440350143 SWD UR Hrst -p '+Bin+' 0x08000000 -Rst';// PROG 1
+       1: Com:=' -c  SN=39FF72065041393440350143 SWD UR Hrst -p '+Bin+' 0x08000000 -Rst';// PROG 2    end;
+    end;
+    FileName_GD1:= PChar(Path + Com);
+    FillChar(StartupInfo_GD1, SizeOf(StartupInfo_GD1), #0);
+    StartupInfo_GD1.cb := SizeOf(StartupInfo_GD1);
+    StartupInfo_GD1.dwFlags := STARTF_USESHOWWINDOW or STARTF_FORCEONFEEDBACK;
+    StartupInfo_GD1.wShowWindow := SW_HIDE;
+    if not
+      CreateProcess
+      (nil,
+       @Filename_GD1[1],
+       nil,
+       nil,
+       false,
+       NORMAL_PRIORITY_CLASS,
+       nil,
+       nil,
+       StartupInfo_GD1,
+       ProcessInfo_GD1)
+    then exit;
+    // ждем завершения инициализации
+    Result_GD1:=WaitForInputIdle(ProcessInfo_GD1.hProcess, 100);
+    Cnt_Process_GD1:=0;
+    Compleet_GD1:= False;
+    end;
+
+    //-----------GD2-------------
+    if Form1.CheckBox355.Checked then
+    begin
+    Path:= '"'+Path_STLINK_CLI+'\STM32 ST-LINK Utility\ST-LINK Utility\ST-LINK_CLI.exe"';
+    Bin:= ProgSTM2_File;
+    Case Form1.rg4.ItemIndex of
+       0: Com:=' -c  SN=39FF72065041393443340143 SWD UR Hrst -p '+Bin+' 0x08000000 -Rst';// старая плата
+       1: Com:=' -c  SN=39FF6E065041393443360143 SWD UR Hrst -p '+Bin+' 0x08000000 -Rst';//CKU + DUE
+    end;
+    FileName_GD2:= PChar(Path + Com);
+    FillChar(StartupInfo_GD2, SizeOf(StartupInfo_GD2), #0);
+    StartupInfo_GD2.cb := SizeOf(StartupInfo_GD2);
+    StartupInfo_GD2.dwFlags := STARTF_USESHOWWINDOW or STARTF_FORCEONFEEDBACK;
+    StartupInfo_GD2.wShowWindow := SW_HIDE;
+    if not
+      CreateProcess
+      (nil,
+       @Filename_GD2[1],
+       nil,
+       nil,
+       false,
+       NORMAL_PRIORITY_CLASS,
+       nil,
+       nil,
+       StartupInfo_GD2,
+       ProcessInfo_GD2)
+    then exit;
+    // ждем завершения инициализации
+    Result_GD2:=WaitForInputIdle(ProcessInfo_GD2.hProcess, 100);
+    Cnt_Process_GD2:=0;
+    Compleet_GD2:= False;
+    end;
 
     //  ProgressBar
     Form2.Caption:='Запись программ SKU';
@@ -17464,6 +17697,7 @@ begin
     //
     repeat
        Application.ProcessMessages;
+
        if Form1.CheckBox352.Checked then
        begin
        if not Compleet_DZ then
@@ -17520,21 +17754,73 @@ begin
        end;
        end
        else Compleet_STM:=True;
+
+       if Form1.CheckBox354.Checked then
+       begin
+       if not Compleet_GD1 then
+       begin
+         WaitForSingleObject(ProcessInfo_GD1.hProcess, Time_Out);
+         GetExitCodeProcess(ProcessInfo_GD1.hProcess, Result_GD1);
+         Cnt_Process_GD1:=Cnt_Process_GD1+1;
+         if  Result_GD1 = 0 then Compleet_GD1:=True;
+         if (Result_GD1 <> 259) and
+            (Result_GD1 <> 0)
+         then
+         begin
+           Memo3.Lines.Add('Ошибка GD1 '+ IntToStr(Result_GD1));
+           Compleet_GD1:=True;
+         end;
+       end;
+       end
+       else Compleet_GD1:=True;
+
+       if Form1.CheckBox355.Checked then
+       begin
+       if not Compleet_GD2 then
+       begin
+         WaitForSingleObject(ProcessInfo_GD2.hProcess, Time_Out);
+         GetExitCodeProcess(ProcessInfo_GD2.hProcess, Result_GD2);
+         Cnt_Process_GD2:=Cnt_Process_GD2+1;
+         if  Result_GD2 = 0 then Compleet_GD2:=True;
+         if (Result_GD2 <> 259) and
+            (Result_GD2 <> 0)
+         then
+         begin
+           Memo3.Lines.Add('Ошибка GD2 '+ IntToStr(Result_GD2));
+           Compleet_GD2:=True;
+         end;
+       end;
+       end
+       else Compleet_GD2:=True;
+
        if Compleet_PA then Time_Out:=50;
        if Compleet_STM then Time_Out:=100;
+       if Compleet_GD1 then Time_Out:=100;
+       if Form1.CheckBox352.Checked then
        Form2.ProgressBar1.Position:=Round(Cnt_Process_DZ*0.5);
-    Until (Compleet_DZ and Compleet_STM and Compleet_PA);//Result_DZ = 0;
+       if Form1.CheckBox354.Checked or
+          Form1.CheckBox355.Checked then
+       Form2.ProgressBar1.Position:=Round(Cnt_Process_GD1*0.5);
+
+    Until (Compleet_DZ and Compleet_STM and Compleet_PA and
+           Compleet_GD1 and Compleet_GD2);//Result_DZ = 0;
     //
 Label_End:
+    if Form1.CheckBox352.Checked then
+    begin
     if ProcessInfo_DZ.hProcess <> 0
     then CloseHandle(ProcessInfo_DZ.hProcess);
     if ProcessInfo_DZ.hThread <> 0
     then CloseHandle(ProcessInfo_DZ.hThread);
+    end;
 
+    if Form1.CheckBox351.Checked then
+    begin
     if ProcessInfo_STM.hProcess <> 0
     then CloseHandle(ProcessInfo_STM.hProcess);
     if ProcessInfo_STM.hThread <> 0
     then CloseHandle(ProcessInfo_STM.hThread);
+    end;
 
     if Form1.CheckBox353.Checked then
     begin
@@ -17543,12 +17829,32 @@ Label_End:
     if ProcessInfo_PA.hThread <> 0
     then CloseHandle(ProcessInfo_PA.hThread);
     end;
+
+    if Form1.CheckBox354.Checked then
+    begin
+    if ProcessInfo_GD1.hProcess <> 0
+    then CloseHandle(ProcessInfo_GD1.hProcess);
+    if ProcessInfo_GD1.hThread <> 0
+    then CloseHandle(ProcessInfo_GD1.hThread);
+    end;
+
+    if Form1.CheckBox355.Checked then
+    begin
+    if ProcessInfo_GD2.hProcess <> 0
+    then CloseHandle(ProcessInfo_GD2.hProcess);
+    if ProcessInfo_GD2.hThread <> 0
+    then CloseHandle(ProcessInfo_GD2.hThread);
+    end;
     //
     Form1.btn3.Down:=False;
     Form1.btn3.Enabled:=True;
     Form1.Close_Form2;    // закрываем форму 2
+    if Form1.CheckBox352.Checked then
     Memo3.Lines.Add('Сделана Запись за '+
                     FloatToStrF(Cnt_Process_DZ/10,ffFixed,4,1)+'c');
+    if Form1.CheckBox354.Checked then
+    Memo3.Lines.Add('Сделана Запись за '+
+                    FloatToStrF(Cnt_Process_GD1/10,ffFixed,4,1)+'c');
 end;
 
 procedure TForm1.rg2Click(Sender: TObject);
@@ -18458,6 +18764,197 @@ begin
             'Предупреждение', MB_OKCANCEL	+MB_ICONASTERISK +MB_APPLMODAL)
        = IDCANCEL	 then Exit;
     FormISO.RunawaySave;
+end;
+
+procedure TForm1.btn_GD1Click(Sender: TObject);
+var
+    Path, Com, Bin:string;
+    FileName_STM: string;
+    StartupInfo_STM: TStartupInfo;
+    ProcessInfo_STM: TProcessInformation;
+    Result_STM: Cardinal;
+    Cnt_Process_STM: DWORD;
+
+Label Label_Repeat,Label_End;
+
+begin
+    if not ProgGD1_Checked then
+    begin
+        Memo3.Lines.Add('Не могу запрограммировать !!! Нет птички GD1_Checked');
+        Exit;
+    end; 
+    Form1.btn_GD1.Down:=True;
+    //Path:= '"C:\Program Files (x86)\STMicroelectronics\STM32 ST-LINK Utility\ST-LINK Utility\ST-LINK_CLI.exe"';
+    Path:= '"'+Path_STLINK_CLI+'\STM32 ST-LINK Utility\ST-LINK Utility\ST-LINK_CLI.exe"';
+    Bin:= ProgSTM_File;
+    // +ST_LINK_SN+ не работает  39FF72065041393440350143
+    Case Form1.rg4.ItemIndex of
+       0: Com:=' -c  SN=39FF72065041393440350143 SWD UR Hrst -p '+Bin+' 0x08000000 -Rst';// PROG 1
+       1: Com:=' -c  SN=39FF72065041393440350143 SWD UR Hrst -p '+Bin+' 0x08000000 -Rst';// PROG 2
+    end;
+    FileName_STM:= PChar(Path + Com);
+    FillChar(StartupInfo_STM, SizeOf(StartupInfo_STM), #0);
+    StartupInfo_STM.cb := SizeOf(StartupInfo_STM);
+    StartupInfo_STM.dwFlags := STARTF_USESHOWWINDOW or STARTF_FORCEONFEEDBACK;
+    StartupInfo_STM.wShowWindow := SW_HIDE;// SW_SHOW;//
+    if not
+      CreateProcess
+      (nil,
+       @Filename_STM[1],
+       nil,
+       nil,
+       false,
+       NORMAL_PRIORITY_CLASS,
+       nil,
+       nil,
+       StartupInfo_STM,
+       ProcessInfo_STM)
+    then exit;
+    // ждем завершения инициализации
+    Result_STM:=WaitForInputIdle(ProcessInfo_STM.hProcess, 100);
+    Cnt_Process_STM:=0;
+    Form1.Memo3.Clear;
+    //  ProgressBar
+    Form2.Caption:='Запись программы GD1';
+    Form2.Label1.Caption:='Идет запись Flash';
+    Form2.Label2.Caption:='Пожалуйста подождите';
+    Form2.ProgressBar1.Position:=0;
+    Form2.Visible:=True;
+    //
+    repeat
+       Application.ProcessMessages;
+       WaitForSingleObject(ProcessInfo_STM.hProcess, 100);
+       GetExitCodeProcess(ProcessInfo_STM.hProcess, Result_STM);
+       Cnt_Process_STM:=Cnt_Process_STM+1;
+       Form2.ProgressBar1.Position:=Round(Cnt_Process_STM*0.5);
+       if (Result_STM <> 259) and
+          (Result_STM <> 0)
+        {  (Result_STM = 21) or // BDM_RC_SYNC_TIMEOUT
+          (Result_STM = 102)   // PROGRAMMING_RC_ERROR_WRONG_SDID }
+       then
+       begin
+         Memo3.Lines.Add('Ошибка '+ IntToStr(Result_STM));
+         goto Label_End;//exit;
+       end;
+    Until Result_STM = 0;
+    //
+Label_End:
+    if ProcessInfo_STM.hProcess <> 0
+    then CloseHandle(ProcessInfo_STM.hProcess);
+    if ProcessInfo_STM.hThread <> 0
+    then CloseHandle(ProcessInfo_STM.hThread);
+
+    Form1.btn_GD1.Down:=False;
+    Form1.btn_GD1.Enabled:=True;
+    Form1.Close_Form2;    // закрываем форму 2
+    Memo3.Lines.Add('Сделана Запись GD1 за '+
+                    FloatToStrF(Cnt_Process_STM/10,ffFixed,4,1)+'c');
+end;
+
+procedure TForm1.btn_GD2Click(Sender: TObject);
+var
+    Path, Com, Bin:string;
+    FileName_STM: string;
+    StartupInfo_STM: TStartupInfo;
+    ProcessInfo_STM: TProcessInformation;
+    Result_STM: Cardinal;
+    Cnt_Process_STM: DWORD;
+
+Label Label_Repeat,Label_End;
+
+begin
+    if not ProgGD2_Checked then
+    begin
+        Memo3.Lines.Add('Не могу запрограммировать !!! Нет птички GD2_Checked');
+        Exit;
+    end;
+    Form1.btn_GD2.Down:=True;
+ //   Path:= '"C:\Program Files (x86)\STMicroelectronics\STM32 ST-LINK Utility\ST-LINK Utility\ST-LINK_CLI.exe"';
+    Path:= '"'+Path_STLINK_CLI+'\STM32 ST-LINK Utility\ST-LINK Utility\ST-LINK_CLI.exe"';
+    Bin:= ProgSTM2_File;
+    // +ST_LINK_SN+ не работает
+    Case Form1.rg4.ItemIndex of
+       0: Com:=' -c  SN=39FF72065041393443340143 SWD UR Hrst -p '+Bin+' 0x08000000 -Rst';// старая плата
+       1: Com:=' -c  SN=39FF6E065041393443360143 SWD UR Hrst -p '+Bin+' 0x08000000 -Rst';//CKU + DUE
+    end;
+    FileName_STM:= PChar(Path + Com);
+    FillChar(StartupInfo_STM, SizeOf(StartupInfo_STM), #0);
+    StartupInfo_STM.cb := SizeOf(StartupInfo_STM);
+    StartupInfo_STM.dwFlags := STARTF_USESHOWWINDOW or STARTF_FORCEONFEEDBACK;
+    StartupInfo_STM.wShowWindow := SW_HIDE;// SW_SHOW;//
+    if not
+      CreateProcess
+      (nil,
+       @Filename_STM[1],
+       nil,
+       nil,
+       false,
+       NORMAL_PRIORITY_CLASS,
+       nil,
+       nil,
+       StartupInfo_STM,
+       ProcessInfo_STM)
+    then exit;
+    // ждем завершения инициализации
+    Result_STM:=WaitForInputIdle(ProcessInfo_STM.hProcess, 100);
+    Cnt_Process_STM:=0;
+    Form1.Memo3.Clear;
+    //  ProgressBar
+    Form2.Caption:='Запись программы GD2';
+    Form2.Label1.Caption:='Идет запись Flash';
+    Form2.Label2.Caption:='Пожалуйста подождите';
+    Form2.ProgressBar1.Position:=0;
+    Form2.Visible:=True;
+    //
+    repeat
+       Application.ProcessMessages;
+       WaitForSingleObject(ProcessInfo_STM.hProcess, 100);
+       GetExitCodeProcess(ProcessInfo_STM.hProcess, Result_STM);
+       Cnt_Process_STM:=Cnt_Process_STM+1;
+       Form2.ProgressBar1.Position:=Round(Cnt_Process_STM*0.5);
+       if (Result_STM <> 259) and
+          (Result_STM <> 0)
+        {  (Result_STM = 21) or // BDM_RC_SYNC_TIMEOUT
+          (Result_STM = 102)   // PROGRAMMING_RC_ERROR_WRONG_SDID }
+       then
+       begin
+         Memo3.Lines.Add('Ошибка '+ IntToStr(Result_STM));
+         goto Label_End;//exit;
+       end;
+    Until Result_STM = 0;
+    //
+Label_End:
+    if ProcessInfo_STM.hProcess <> 0
+    then CloseHandle(ProcessInfo_STM.hProcess);
+    if ProcessInfo_STM.hThread <> 0
+    then CloseHandle(ProcessInfo_STM.hThread);
+
+    Form1.btn_GD2.Down:=False;
+    Form1.btn_GD2.Enabled:=True;
+    Form1.Close_Form2;    // закрываем форму 2
+    Memo3.Lines.Add('Сделана Запись GD2 за '+
+                    FloatToStrF(Cnt_Process_STM/10,ffFixed,4,1)+'c');
+end;
+
+procedure TForm1.CheckBox354Click(Sender: TObject);
+begin
+   if Form1.CheckBox354.Checked then
+         ProgGD1_Checked:=True
+   else  ProgGD1_Checked:=False;
+   DiagIni.WriteBool('UpGrade_Serial','ProgGD1_Checked',ProgGD1_Checked);
+end;
+
+procedure TForm1.CheckBox355Click(Sender: TObject);
+begin
+   if Form1.CheckBox355.Checked then
+         ProgGD2_Checked:=True
+   else  ProgGD2_Checked:=False;
+   DiagIni.WriteBool('UpGrade_Serial','ProgGD2_Checked',ProgGD2_Checked)
+end;
+
+procedure TForm1.rg4Click(Sender: TObject);
+begin
+    DiagIni.WriteString('UpGrade_Serial','ProgrammatorNEW',IntToStr(Form1.rg4.ItemIndex));
 end;
 
 end.

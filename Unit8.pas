@@ -57,6 +57,10 @@ type
     ButtonXBR: TButton;
     GroupBox14: TGroupBox;
     Prop: TButton;
+    GroupBox15: TGroupBox;
+    btn1: TButton;
+    GroupBox16: TGroupBox;
+    btn2: TButton;
     procedure Button1Click(Sender: TObject);
     procedure TrackBar2Change(Sender: TObject);
   private
@@ -242,6 +246,27 @@ begin
                                 Fl_Prop:= true;
                                 end;
         end;
+        // торможение одной осью
+         if ((Sender as TButton).Name='btn1')
+         then
+         begin
+           if Fl_BrakeFront_Only then
+                                begin
+                                     Fl_BrakeFront_Only:= false;
+                                     clrFl_Brake_Only:= true;
+                                end
+                                else Fl_BrakeFront_Only:= true;
+         end;
+         if ((Sender as TButton).Name='btn2')
+         then
+         begin
+           if Fl_BrakeRear_Only then
+                                begin
+                                     Fl_BrakeRear_Only:= false;
+                                     clrFl_Brake_Only:= true;
+                                end
+                                else Fl_BrakeRear_Only:= true;
+         end;
         Form1.DSC_TestEnd;
 end;
 

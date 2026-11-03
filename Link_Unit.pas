@@ -2,7 +2,7 @@ unit Link_Unit;
 
 interface
 uses
-  Windows,Dialogs,Classes,Sysutils;
+  Windows,Dialogs,Classes,Sysutils, Forms;
 
 const
         Com_Init_Char = 85;
@@ -50,7 +50,7 @@ function  Com_InitBlock:Boolean;
 function  Com_Link_Command(Command_Name:Byte; ArrayToSend:ComBuf;var ArrayToReceive:ComBuf):boolean;
 procedure Com_Baudrate(Com_Baudrate:Integer);
 procedure Com_Close;
-
+procedure Com_Baudrate_Fail;
 
 var
         ComBufIn,ComBufOut,TestComBuf:ComBuf;
@@ -63,6 +63,7 @@ var
         Com_Busy_F,Com_RealTime_F,Com_Connected_F:Boolean;
         Port_Num:Byte;
         Com_Result:Boolean;
+
 implementation
 
 uses Com_Thread,Screen_Thread,mainABSdiag;
@@ -421,6 +422,17 @@ begin
 	PurgeComm(hCOM, PURGE_TXABORT or PURGE_RXABORT or PURGE_TXCLEAR or PURGE_RXCLEAR);
 end;
 
+procedure Com_Baudrate_Fail;
+begin
+   if not RepeatIni_F then
+   begin
+     Form1.BtnStart.Down := False;
+     Application.MessageBox( PChar('Проверьте Включен блок и Com Baud Rate'),
+     'Предупреждение Связь Не установлена', MB_OK+MB_ICONASTERISK+MB_APPLMODAL);
+     Form1.N3Click(nil);
+   end;
+end;
+
 function Com_InitBlock;
 Var code:Byte;
     r:LongBool;
@@ -511,6 +523,13 @@ begin
                   else Tip_Block:=6;
                 end;
                 end;
+                if (KeyByte1 = 169) and
+                   (KeyByte2 = 123)
+                then begin
+                // не тот Com_Baudrate Tip_Block=6
+                   Com_Baudrate_Fail;
+                   Exit;
+                end;
                 Com_Connected_F:=True;
                 Result:=True;
                 Fl_ResetMCU:=True;
@@ -521,6 +540,14 @@ begin
                 KeyByte2:=0;
                 KeyByte3:=0;
                 Result:=False;
+                Com_Connected_F:=False;
+               if not RepeatIni_F then
+               begin
+               Form1.BtnStart.Down := False;
+               Application.MessageBox( PChar('Проверьте Включен блок и Com Baud Rate'),
+               'Предупреждение Связь Не установлена', MB_OK+MB_ICONASTERISK+MB_APPLMODAL);
+               Form1.N3Click(nil);
+               end;
             end;
    end;
 
