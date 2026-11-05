@@ -1,0 +1,151 @@
+void     Press_Control(WheelTypeDef* Wheelx, TypeDef_Press_Reg* REG)
+{ // общая процедура EBL_IR   ASR.Brake.REG   XBR_Press_Control
+  // для нормального слежения нужно задать
+  // давлениe Pdes
+  // dPump подкачки
+  // TrP зона слежения
+  // CutT время отсечки
+
+	uint16_t dPp;
+
+		if(REG->KL == __KL_Ret_Exh)
+		{ // выполнение выпуска
+     	   if(REG->Pdes > Wheelx->Press) // контроль выпуска
+     		  REG->KL = __KL_Ret_Cut;    // отсечка
+		}
+        else
+        if(REG->KL == __KL_Ret_Cut)
+        { // выполнение отсечки
+          if((REG->Pdes + REG->TrP) < Wheelx->Press)
+        	  REG->KL = __KL_Ret_Exh; // выпуск
+	      else
+          if(++REG->Cnt > REG->CutT)
+          { REG->Cnt = 0;
+            dPp = REG->Pdes - Wheelx->Press;
+              if(dPp > REG->dPpump)
+           	     dPp = REG->dPpump;
+			  REG->Ppump = Wheelx->Press + dPp;
+              if((REG->Pdes - REG->TrP) > Wheelx->Press)
+              {	  Wheelx->PumpT = 0;
+            	  REG->KL = __KL_Ret_Pump;  // подкачка
+              }
+            }
+          }
+        else
+        { // выполнение подкачки
+     	 if(REG->Ppump > REG->Pdes) // понизилось задание
+     		REG->Ppump = REG->Pdes;
+     	 Wheelx->Ppump = REG->Ppump; // передаем в процедуру Ppump
+     	 if(Check_Pump(Wheelx))
+     		REG->KL = __KL_Ret_Cut;  // отсечка
+        }
+} // End  Press_Control()
+
+    // Новое определение опорной скорости
+	// добавить птичку
+    ASR.FrontBase = ASR.FrontSpeed * (uint32_t)__Koef_Default/
+			         ABS.Base.Koef;
+ //   ASR.FrontSpeed = ASR.FrontSpeed;//ASR.FrontBase;
+
+#define   __Kbase_VxMin    0x0500    //5km/h
+#define   __Kbase_Tsum     200
+#define   __ABS_Base_New
+	   
+   // находим коэффициент приведения
+   if(//!Control_Active &&
+	  !ABS_Active &&
+	   ABS.Base.High_Rear > __Kbase_VxMin &&
+	   ABS.Base.High_Front >__Kbase_VxMin)
+   {
+	 ABS.Base.K = ABS.Base.High_Front * (uint32_t)__Koef_Default /
+				  ABS.Base.High_Rear;
+	 if(ABS.Base.T < __Kbase_Tsum) // время обновления Koef
+	 {  ABS.Base.SumK += ABS.Base.K;
+	    ABS.Base.T++;
+	    if(!ABS.Base.Cmpl)
+	    ABS.Base.Koef = ABS.Base.SumK / ABS.Base.T;
+	 }
+	 else
+	 { ABS.Base.Koef = ABS.Base.SumK / ABS.Base.T;
+	   ABS.Base.SumK = 0;
+	   ABS.Base.T = 0;
+	   ABS.Base.Cmpl = 1;
+	 }
+   }
+   
+      if(ABS.Base.Koef)
+   {
+#ifdef   __AxisF_Compile
+	 // приводим зад к переду
+	 ABS.Base.High = (uint32_t)ABS.Base.High_Rear * ABS.Base.Koef /
+			                                        __Koef_Default;
+	 if(ABS.Base.High < ABS.Base.High_Front)
+	    ABS.Base.High = ABS.Base.High_Front;
+#else
+	 // приводим перед к заду
+	 ABS.Base.High = ABS.Base.High_Front * (uint32_t)__Koef_Default/
+			         ABS.Base.Koef;
+	 if(ABS.Base.High < ABS.Base.High_Rear)
+	    ABS.Base.High = ABS.Base.High_Rear;
+#endif
+   }
+   
+   //New
+ int32_t RefSpeed = (uint32_t)ABS.Base.High;
+ uint16_t dRef = (RefSpeed * __Ref_Sleep)/__Slip_100p
+ 
+ // !!MAKE вопрос с корректировкой задатчика
+	if(Wheelx->ABS.Base > Wheelx->Speed)
+	{
+#define   __BaseClamp_Dec 77 // 0,5m/c^2
+// разметность 1m/c^2 - 8Msb
+	  //счетчик прижима
+	  Wheelx->BaseMax.Clamp = (uint32_t)(Wheelx->ABS.Base -
+			                             Wheelx->Speed) / __BaseClamp_Dec;
+	}
+	
+    Wheel_FL.ABS.CFG.PromSp = _Lo_16(IEE_DSC_Const[181])*8;
+    Wheel_FR.ABS.CFG.PromSp = Wheel_FL.ABS.CFG.PromSp;
+    // SleepEnd  точность 0,1% max 24,9%
+    Wheel_RL.ABS.Ph3.SlipEnd = _Hi_16(IEE_DSC_Const[182])*256/10;
+    Wheel_RR.ABS.Ph3.SlipEnd = Wheel_RL.ABS.Ph3.SlipEnd;
+    Wheel_FL.ABS.Ph3.SlipEnd = _Lo_16(IEE_DSC_Const[182])*256/10;
+    Wheel_FR.ABS.Ph3.SlipEnd = Wheel_FL.ABS.Ph3.SlipEnd;
+    
+    
+ /*
+	// Ограничение по низу  !!!!! вредно
+#define   __dSp_Corr_Min    0//14
+// на малых скоростих возможно растормаживание (Sleep)
+#define   __Corr_SpMin    0x0A00 // 20km/h
+	if(Wheelx->ABS.Base > ABS.SpeedOFF &&
+	   Wheelx->ABS.Base < Wheelx->BaseMax.Thr && //ABS.Base.Min &&
+	   Wheelx->ABS.Active)
+	{
+//o	   Wheelx->ABS.Base +=__dSp_Corr_Min;
+	}
+// определение поправки на размер шин
+	if(!Control_Active)
+	{  // отношение к Base.High
+      // Base.High может быть 0
+	  if(ABS.Base.High > __Corr_SpMin)
+	  {	Wheelx->BaseMax.Ki = (Wheelx->ABS.Base * (uint32_t)0x7FFF) /
+				                      ABS.Base.High;
+		if(Wheelx->BaseMax.T < 0x0100)
+		{  Wheelx->BaseMax.T++;
+		   Wheelx->BaseMax.Ki_Sum += Wheelx->BaseMax.Ki;
+		}
+		else
+		{  Wheelx->BaseMax.Koef = Wheelx->BaseMax.Ki_Sum / 256;
+		   Wheelx->BaseMax.T = 0;
+		   Wheelx->BaseMax.Ki_Sum = 0;
+		}
+	  }
+	}
+	Wheelx->BaseMax.Thr = (uint32_t)ABS.Base.Min *  Wheelx->BaseMax.Koef /(uint16_t)0x7FFF;
+*/
+	if(Wheelx->BaseMax.Clamp &&
+	   Wheelx->Speed >	Wheelx->ABS.Base)
+	{  Wheelx->BaseMax.Clamp = 0;
+		//Wheelx->ABS.Base = Wheelx->Speed;
+	}   	   	   

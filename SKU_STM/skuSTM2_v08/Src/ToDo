@@ -1,0 +1,25 @@
+// передавать в другой MC
+ *   uint16_t   ABS.Base.MidR или  uint16_t   ABS.Base.MidF
+ *   uint16_t   ABS.RefRear   или  uint16_t   ABS.RefFront; 
+ *   uint8_t   DSC_Flags     флаги ИЛИ ||
+ *   uint8_t   Brake_Flags   флаги ИЛИ ||
+    
+    MDT_Flags        MDT.Fl.Byte
+ *   uint8_t MDT.Phase
+*    uint16_t   Brake.DemandValue
+    uint8_t MDT.ISO_N
+ *   ADC_Kl15 1 to 2
+ *   ADC_Sila 1 to 2
+  s_Diff_Error сгрупировать F R
+    
+// пересмотреть
+**ABS.Base
+ABS_MIRR_TAI   !сигналы в разных STM  
+Modulator_Test    флаги перевести в MDT.Phase
+CheckError_BPS !сигналы в разных STM
+Power_Test()
+
+// написать 
+Button
+Blink_Code
+EEPROM
