@@ -1,0 +1,121 @@
+object Form9: TForm9
+  Left = 980
+  Height = 152
+  Top = 3
+  Width = 260
+  HorzScrollBar.Visible = False
+  VertScrollBar.Visible = False
+  Caption = 'Ввод  VIN'
+  ClientHeight = 152
+  ClientWidth = 260
+  Color = clBtnFace
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  LCLVersion = '4.8.0.0'
+  OnShow = FormShow
+  object Label516: TLabel
+    Left = 16
+    Height = 13
+    Top = 63
+    Width = 19
+    Caption = 'Код'
+  end
+  object Label1: TLabel
+    Left = 32
+    Height = 13
+    Top = 135
+    Width = 3
+  end
+  object Label2: TLabel
+    Left = 80
+    Height = 13
+    Top = 64
+    Width = 3
+  end
+  object Button1: TButton
+    Left = 10
+    Height = 25
+    Top = 84
+    Width = 79
+    Caption = 'Сброс'
+    TabOrder = 0
+    OnClick = Button1Click
+  end
+  object GroupBox152: TGroupBox
+    Left = 8
+    Height = 55
+    Top = 4
+    Width = 225
+    Caption = 'VIN'
+    ClientHeight = 55
+    ClientWidth = 225
+    ParentBackground = False
+    TabOrder = 1
+    object Label607: TLabel
+      Left = 32
+      Height = 13
+      Top = 8
+      Width = 180
+      Caption = 'Заглавные латинские 17 символов'
+    end
+    object Edit259: TEdit
+      Left = 66
+      Height = 21
+      Top = 26
+      Width = 42
+      TabOrder = 1
+      OnChange = Edit259Change
+    end
+    object Edit260: TEdit
+      Left = 112
+      Height = 21
+      Top = 26
+      Width = 20
+      TabOrder = 2
+      OnChange = Edit260Change
+    end
+    object Edit261: TEdit
+      Left = 156
+      Height = 21
+      Top = 26
+      Width = 50
+      TabOrder = 4
+      OnChange = Edit261Change
+    end
+    object Edit262: TEdit
+      Left = 34
+      Height = 21
+      Top = 26
+      Width = 28
+      TabOrder = 0
+      OnChange = Edit262Change
+    end
+    object Edit263: TEdit
+      Left = 136
+      Height = 21
+      Top = 26
+      Width = 16
+      TabOrder = 3
+      OnChange = Edit263Change
+    end
+  end
+  object Edit265: TEdit
+    Left = 42
+    Height = 21
+    Top = 60
+    Width = 27
+    TabOrder = 2
+    OnChange = Edit265Change
+  end
+  object Button64: TButton
+    Left = 152
+    Height = 25
+    Top = 84
+    Width = 75
+    Caption = 'Сохранить'
+    Enabled = False
+    TabOrder = 3
+    OnClick = Button64Click
+  end
+end

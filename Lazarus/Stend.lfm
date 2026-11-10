@@ -1,0 +1,734 @@
+object FormStend: TFormStend
+  Left = 457
+  Height = 598
+  Top = 87
+  Width = 482
+  Caption = 'STEND'
+  ClientHeight = 598
+  ClientWidth = 482
+  Color = clBtnFace
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  LCLVersion = '4.8.0.0'
+  OnActivate = FormActivate
+  OnDeactivate = FormDeactivate
+  OnShow = FormShow
+  object Label66: TLabel
+    Left = 424
+    Height = 13
+    Top = 24
+    Width = 15
+    Caption = '-----'
+  end
+  object Label67: TLabel
+    Left = 288
+    Height = 13
+    Top = 104
+    Width = 129
+    Caption = 'ВЫБЕРИТЕ ТИП БЛОКА!'
+    Font.Color = clRed
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    ParentFont = False
+  end
+  object GroupBox1: TGroupBox
+    Left = 16
+    Height = 89
+    Top = 8
+    Width = 225
+    Caption = 'Датчики     AT        PT         GT       Speed'
+    ClientHeight = 89
+    ClientWidth = 225
+    ParentBackground = False
+    TabOrder = 0
+    object Label8: TLabel
+      Left = 64
+      Height = 13
+      Top = 64
+      Width = 9
+      Caption = '---'
+    end
+    object Label4: TLabel
+      Left = 24
+      Height = 13
+      Top = 64
+      Width = 20
+      Caption = 'SS4'
+    end
+    object Label3: TLabel
+      Left = 24
+      Height = 13
+      Top = 48
+      Width = 20
+      Caption = 'SS3'
+    end
+    object Label2: TLabel
+      Left = 24
+      Height = 13
+      Top = 32
+      Width = 20
+      Caption = 'SS2'
+    end
+    object Label1: TLabel
+      Left = 24
+      Height = 13
+      Top = 16
+      Width = 20
+      Caption = 'SS1'
+    end
+    object Label5: TLabel
+      Left = 64
+      Height = 13
+      Top = 16
+      Width = 9
+      Caption = '---'
+    end
+    object Label6: TLabel
+      Left = 64
+      Height = 13
+      Top = 32
+      Width = 9
+      Caption = '---'
+    end
+    object Label7: TLabel
+      Left = 64
+      Height = 13
+      Top = 48
+      Width = 9
+      Caption = '---'
+    end
+    object Label46: TLabel
+      Left = 104
+      Height = 13
+      Top = 16
+      Width = 9
+      Caption = '---'
+    end
+    object Label47: TLabel
+      Left = 104
+      Height = 13
+      Top = 32
+      Width = 9
+      Caption = '---'
+    end
+    object Label48: TLabel
+      Left = 104
+      Height = 13
+      Top = 48
+      Width = 9
+      Caption = '---'
+    end
+    object Label49: TLabel
+      Left = 104
+      Height = 13
+      Top = 64
+      Width = 9
+      Caption = '---'
+    end
+    object Label51: TLabel
+      Left = 144
+      Height = 13
+      Top = 32
+      Width = 9
+      Caption = '---'
+    end
+    object Label52: TLabel
+      Left = 144
+      Height = 13
+      Top = 48
+      Width = 9
+      Caption = '---'
+    end
+    object Label53: TLabel
+      Left = 144
+      Height = 13
+      Top = 64
+      Width = 9
+      Caption = '---'
+    end
+    object Label50: TLabel
+      Left = 144
+      Height = 13
+      Top = 16
+      Width = 9
+      Caption = '---'
+    end
+    object Label54: TLabel
+      Left = 192
+      Height = 13
+      Top = 16
+      Width = 9
+      Caption = '---'
+    end
+    object Label55: TLabel
+      Left = 192
+      Height = 13
+      Top = 32
+      Width = 9
+      Caption = '---'
+    end
+    object Label56: TLabel
+      Left = 192
+      Height = 13
+      Top = 48
+      Width = 9
+      Caption = '---'
+    end
+    object Label57: TLabel
+      Left = 192
+      Height = 13
+      Top = 64
+      Width = 9
+      Caption = '---'
+    end
+  end
+  object GroupBox3: TGroupBox
+    Left = 16
+    Height = 113
+    Top = 104
+    Width = 225
+    Caption = 'Лампы Кнопки                  On         Off'
+    ClientHeight = 113
+    ClientWidth = 225
+    ParentBackground = False
+    TabOrder = 1
+    object Label9: TLabel
+      Left = 16
+      Height = 13
+      Top = 16
+      Width = 53
+      Caption = 'ABS_Lamp'
+    end
+    object Label10: TLabel
+      Left = 16
+      Height = 13
+      Top = 32
+      Width = 54
+      Caption = 'ASR_Lamp'
+    end
+    object Label11: TLabel
+      Left = 16
+      Height = 13
+      Top = 48
+      Width = 42
+      Caption = 'ABS_Sw'
+    end
+    object Label12: TLabel
+      Left = 16
+      Height = 13
+      Top = 64
+      Width = 43
+      Caption = 'ASR_Sw'
+    end
+    object Label13: TLabel
+      Left = 16
+      Height = 13
+      Top = 80
+      Width = 49
+      Caption = 'TSET_Sw'
+    end
+    object Label14: TLabel
+      Left = 16
+      Height = 13
+      Top = 96
+      Width = 39
+      Caption = 'DIA_Sw'
+    end
+    object Label19: TLabel
+      Left = 144
+      Height = 13
+      Top = 16
+      Width = 9
+      Caption = '---'
+    end
+    object Label20: TLabel
+      Left = 177
+      Height = 13
+      Top = 16
+      Width = 9
+      Caption = '---'
+    end
+    object Label21: TLabel
+      Left = 176
+      Height = 13
+      Top = 48
+      Width = 9
+      Caption = '---'
+    end
+    object Label22: TLabel
+      Left = 176
+      Height = 13
+      Top = 64
+      Width = 9
+      Caption = '---'
+    end
+    object Label23: TLabel
+      Left = 176
+      Height = 13
+      Top = 80
+      Width = 9
+      Caption = '---'
+    end
+    object Label44: TLabel
+      Left = 144
+      Height = 13
+      Top = 32
+      Width = 9
+      Caption = '---'
+    end
+    object Label45: TLabel
+      Left = 177
+      Height = 13
+      Top = 32
+      Width = 9
+      Caption = '---'
+    end
+  end
+  object GroupBox2: TGroupBox
+    Left = 16
+    Height = 25
+    Top = 224
+    Width = 225
+    Caption = 'CAN'
+    ClientHeight = 25
+    ClientWidth = 225
+    ParentBackground = False
+    TabOrder = 2
+    object Label15: TLabel
+      Left = 48
+      Height = 13
+      Top = 8
+      Width = 15
+      Caption = '-----'
+    end
+  end
+  object GroupBox4: TGroupBox
+    Left = 16
+    Height = 41
+    Top = 256
+    Width = 225
+    Caption = 'Питание'
+    ClientHeight = 41
+    ClientWidth = 225
+    ParentBackground = False
+    TabOrder = 3
+    object Label16: TLabel
+      Left = 80
+      Height = 13
+      Top = 8
+      Width = 25
+      Caption = 'KL15'
+    end
+    object Label17: TLabel
+      Left = 80
+      Height = 13
+      Top = 24
+      Width = 25
+      Caption = 'KL30'
+    end
+  end
+  object GroupBox5: TGroupBox
+    Left = 16
+    Height = 30
+    Top = 304
+    Width = 225
+    Caption = 'DBR          On            Off'
+    ClientHeight = 30
+    ClientWidth = 225
+    ParentBackground = False
+    TabOrder = 4
+    object Label18: TLabel
+      Left = 64
+      Height = 13
+      Top = 12
+      Width = 12
+      Caption = '----'
+    end
+    object Label24: TLabel
+      Left = 112
+      Height = 13
+      Top = 12
+      Width = 12
+      Caption = '----'
+    end
+  end
+  object GroupBox6: TGroupBox
+    Left = 16
+    Height = 41
+    Top = 344
+    Width = 225
+    Caption = 'DIF           On             Off'
+    ClientHeight = 41
+    ClientWidth = 225
+    ParentBackground = False
+    TabOrder = 5
+    object Label25: TLabel
+      Left = 64
+      Height = 13
+      Top = 12
+      Width = 9
+      Caption = '---'
+    end
+    object Label26: TLabel
+      Left = 112
+      Height = 13
+      Top = 12
+      Width = 9
+      Caption = '---'
+    end
+    object Label29: TLabel
+      Left = 8
+      Height = 13
+      Top = 24
+      Width = 20
+      Caption = 'Gnd'
+    end
+    object Label30: TLabel
+      Left = 64
+      Height = 13
+      Top = 24
+      Width = 9
+      Caption = '---'
+    end
+    object Label31: TLabel
+      Left = 112
+      Height = 13
+      Top = 24
+      Width = 9
+      Caption = '---'
+    end
+  end
+  object GroupBox7: TGroupBox
+    Left = 16
+    Height = 30
+    Top = 392
+    Width = 225
+    Caption = 'PK            On             Off'
+    ClientHeight = 30
+    ClientWidth = 225
+    ParentBackground = False
+    TabOrder = 6
+    object Label27: TLabel
+      Left = 64
+      Height = 13
+      Top = 12
+      Width = 9
+      Caption = '---'
+    end
+    object Label28: TLabel
+      Left = 112
+      Height = 13
+      Top = 12
+      Width = 9
+      Caption = '---'
+    end
+  end
+  object GroupBox8: TGroupBox
+    Left = 16
+    Height = 89
+    Top = 424
+    Width = 225
+    Caption = 'Модуляторы    AV       EV             St'
+    ClientHeight = 89
+    ClientWidth = 225
+    ParentBackground = False
+    TabOrder = 7
+    object Label32: TLabel
+      Left = 16
+      Height = 13
+      Top = 16
+      Width = 21
+      Caption = 'M1L'
+    end
+    object Label33: TLabel
+      Left = 16
+      Height = 13
+      Top = 32
+      Width = 23
+      Caption = 'M1R'
+    end
+    object Label34: TLabel
+      Left = 16
+      Height = 13
+      Top = 48
+      Width = 21
+      Caption = 'M2L'
+    end
+    object Label35: TLabel
+      Left = 16
+      Height = 13
+      Top = 64
+      Width = 23
+      Caption = 'M2R'
+    end
+    object Label36: TLabel
+      Left = 80
+      Height = 13
+      Top = 16
+      Width = 9
+      Caption = '---'
+    end
+    object Label37: TLabel
+      Left = 80
+      Height = 13
+      Top = 32
+      Width = 9
+      Caption = '---'
+    end
+    object Label38: TLabel
+      Left = 80
+      Height = 13
+      Top = 48
+      Width = 9
+      Caption = '---'
+    end
+    object Label39: TLabel
+      Left = 80
+      Height = 13
+      Top = 64
+      Width = 9
+      Caption = '---'
+    end
+    object Label40: TLabel
+      Left = 120
+      Height = 13
+      Top = 16
+      Width = 9
+      Caption = '---'
+    end
+    object Label41: TLabel
+      Left = 120
+      Height = 13
+      Top = 32
+      Width = 9
+      Caption = '---'
+    end
+    object Label42: TLabel
+      Left = 120
+      Height = 13
+      Top = 48
+      Width = 9
+      Caption = '---'
+    end
+    object Label43: TLabel
+      Left = 120
+      Height = 13
+      Top = 64
+      Width = 9
+      Caption = '---'
+    end
+    object Label58: TLabel
+      Left = 152
+      Height = 13
+      Top = 16
+      Width = 9
+      Caption = '---'
+    end
+    object Label59: TLabel
+      Left = 152
+      Height = 13
+      Top = 32
+      Width = 9
+      Caption = '---'
+    end
+    object Label60: TLabel
+      Left = 152
+      Height = 13
+      Top = 48
+      Width = 9
+      Caption = '---'
+    end
+    object Label61: TLabel
+      Left = 152
+      Height = 13
+      Top = 64
+      Width = 9
+      Caption = '---'
+    end
+    object Label62: TLabel
+      Left = 184
+      Height = 13
+      Top = 16
+      Width = 9
+      Caption = '---'
+    end
+    object Label63: TLabel
+      Left = 184
+      Height = 13
+      Top = 32
+      Width = 9
+      Caption = '---'
+    end
+    object Label64: TLabel
+      Left = 184
+      Height = 13
+      Top = 48
+      Width = 9
+      Caption = '---'
+    end
+    object Label65: TLabel
+      Left = 184
+      Height = 13
+      Top = 64
+      Width = 9
+      Caption = '---'
+    end
+  end
+  object Button1: TButton
+    Left = 272
+    Height = 25
+    Top = 504
+    Width = 75
+    Caption = 'Power OFF'
+    Font.Color = clNavy
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    ParentFont = False
+    TabOrder = 8
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 368
+    Height = 25
+    Top = 504
+    Width = 75
+    Caption = 'RESET'
+    Font.Color = clGreen
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    ParentFont = False
+    TabOrder = 9
+    OnClick = Button2Click
+  end
+  object Button3: TButton
+    Left = 280
+    Height = 25
+    Top = 448
+    Width = 121
+    Caption = 'Настройка Уставок'
+    TabOrder = 10
+    OnClick = Button3Click
+  end
+  object Button4: TButton
+    Left = 312
+    Height = 25
+    Top = 384
+    Width = 75
+    Caption = 'Button4'
+    Enabled = False
+    TabOrder = 11
+    Visible = False
+    OnClick = Button4Click
+  end
+  object RadioGroup1: TRadioGroup
+    Left = 296
+    Height = 81
+    Top = 16
+    Width = 113
+    AutoFill = True
+    Caption = 'Тип  блока'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 81
+    ClientWidth = 113
+    Items.Strings = (
+      '16-04'
+      '19-05'
+      '024'
+    )
+    ParentBackground = False
+    TabOrder = 12
+    OnClick = RadioGroup1Click
+  end
+  object Panel1: TPanel
+    Left = 256
+    Height = 65
+    Top = 224
+    Width = 201
+    ClientHeight = 65
+    ClientWidth = 201
+    ParentBackground = False
+    TabOrder = 13
+    object Label68: TLabel
+      Left = 24
+      Height = 20
+      Top = 32
+      Width = 66
+      Caption = '             '
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label70: TLabel
+      Left = 9
+      Height = 16
+      Top = 5
+      Width = 185
+      Caption = 'ПРОВЕРКА ЗАВЕРШЕНА'
+      Font.Color = clWindowText
+      Font.Height = -15
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+      Visible = False
+    end
+  end
+  object GroupBox9: TGroupBox
+    Left = 16
+    Height = 33
+    Top = 520
+    Width = 225
+    Caption = 'EEPROM'
+    ClientHeight = 33
+    ClientWidth = 225
+    ParentBackground = False
+    TabOrder = 14
+    object Label69: TLabel
+      Left = 152
+      Height = 13
+      Top = 14
+      Width = 12
+      Caption = '----'
+    end
+    object Label71: TLabel
+      Left = 80
+      Height = 13
+      Top = 14
+      Width = 9
+      Caption = '---'
+    end
+    object Label72: TLabel
+      Left = 120
+      Height = 13
+      Top = 14
+      Width = 9
+      Caption = '---'
+    end
+  end
+  object GroupBox10: TGroupBox
+    Left = 296
+    Height = 49
+    Top = 136
+    Width = 113
+    Caption = 'Тип платы'
+    ClientHeight = 49
+    ClientWidth = 113
+    ParentBackground = False
+    TabOrder = 15
+    object Label73: TLabel
+      Left = 32
+      Height = 13
+      Top = 24
+      Width = 9
+      Caption = '---'
+    end
+  end
+end

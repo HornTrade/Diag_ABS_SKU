@@ -1,0 +1,57 @@
+object FormError: TFormError
+  Left = 654
+  Height = 183
+  Top = 352
+  Width = 654
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'ViewError'
+  ClientHeight = 183
+  ClientWidth = 654
+  Color = clBtnFace
+  DragKind = dkDock
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Position = poScreenCenter
+  LCLVersion = '4.8.0.0'
+  OnShow = FormShow
+  object sgError: TStringGrid
+    Left = 8
+    Height = 120
+    Top = 16
+    Width = 633
+    ColCount = 3
+    DefaultColWidth = 155
+    FixedCols = 0
+    FixedRows = 0
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRowSelect, goThumbTracking]
+    RowCount = 2
+    ScrollBars = ssVertical
+    TabOrder = 0
+    OnSelectCell = sgErrorSelectCell
+    ColWidths = (
+      515
+      57
+      205
+    )
+  end
+  object btnDelete: TButton
+    Left = 184
+    Height = 25
+    Top = 144
+    Width = 81
+    Caption = 'Удалить'
+    TabOrder = 1
+    OnClick = btnDeleteClick
+  end
+  object btnQuit: TButton
+    Left = 304
+    Height = 25
+    Top = 144
+    Width = 81
+    Caption = 'Закрыть'
+    TabOrder = 2
+    OnClick = btnQuitClick
+  end
+end

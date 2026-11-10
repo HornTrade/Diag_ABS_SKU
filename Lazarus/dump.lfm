@@ -1,0 +1,67 @@
+object DumpForm: TDumpForm
+  Left = 632
+  Height = 337
+  Top = 353
+  Width = 692
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = 'Дамп памяти'
+  ClientHeight = 337
+  ClientWidth = 692
+  Color = clBtnFace
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Position = poScreenCenter
+  LCLVersion = '4.8.0.0'
+  OnShow = FormShow
+  object Gdump: TStringGrid
+    Left = 8
+    Height = 297
+    Top = 24
+    Width = 547
+    ColCount = 17
+    DefaultColWidth = 30
+    DefaultRowHeight = 16
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goEditing, goThumbTracking]
+    RowCount = 17
+    TabOrder = 0
+    OnSetEditText = GdumpSetEditText
+  end
+  object bQuit: TButton
+    Left = 564
+    Height = 25
+    Top = 200
+    Width = 121
+    Caption = 'Выход'
+    TabOrder = 1
+    OnClick = bQuitClick
+  end
+  object dumpStatBar: TStatusBar
+    Left = 0
+    Height = 20
+    Top = 317
+    Width = 692
+    Panels = <>
+  end
+  object bRead: TButton
+    Left = 564
+    Height = 25
+    Top = 244
+    Width = 121
+    Caption = 'Прочитать'
+    Enabled = False
+    TabOrder = 3
+    OnClick = bReadClick
+  end
+  object changeSave: TButton
+    Left = 564
+    Height = 25
+    Top = 284
+    Width = 121
+    Caption = 'Сохранить изменения'
+    Enabled = False
+    TabOrder = 4
+    OnClick = changeSaveClick
+  end
+end

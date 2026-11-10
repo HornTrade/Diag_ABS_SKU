@@ -1,0 +1,525 @@
+object TestDSC: TTestDSC
+  Left = 1009
+  Height = 618
+  Top = 11
+  Width = 335
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'Test DSC'
+  ClientHeight = 618
+  ClientWidth = 335
+  Color = clBtnFace
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Position = poScreenCenter
+  LCLVersion = '4.8.0.0'
+  object Label369: TLabel
+    Left = 29
+    Height = 13
+    Top = 536
+    Width = 6
+    Caption = '0'
+  end
+  object Label367: TLabel
+    Left = 216
+    Height = 13
+    Top = 536
+    Width = 19
+    Caption = 'max'
+  end
+  object Label370: TLabel
+    Left = 93
+    Height = 13
+    Top = 536
+    Width = 15
+    Caption = '-----'
+  end
+  object Button5: TButton
+    Left = 136
+    Height = 25
+    Top = 584
+    Width = 75
+    Caption = 'Сброс'
+    TabOrder = 0
+    OnClick = Button1Click
+  end
+  object GroupBox1: TGroupBox
+    Left = 168
+    Height = 167
+    Top = 320
+    Width = 155
+    Caption = 'Управление ДВИГАТЕЛЕМ'
+    ClientHeight = 167
+    ClientWidth = 155
+    ParentBackground = False
+    TabOrder = 1
+    object GroupBox67: TGroupBox
+      Left = 8
+      Height = 49
+      Top = 16
+      Width = 137
+      Caption = 'Oграничение момента'
+      ClientHeight = 49
+      ClientWidth = 137
+      ParentBackground = False
+      TabOrder = 0
+      object Button7: TButton
+        Left = 36
+        Height = 25
+        Top = 16
+        Width = 75
+        Caption = 'Выключен'
+        TabOrder = 0
+        OnClick = Button1Click
+      end
+    end
+    object GroupBox68: TGroupBox
+      Left = 8
+      Height = 49
+      Top = 64
+      Width = 137
+      Caption = 'Задание момента'
+      ClientHeight = 49
+      ClientWidth = 137
+      ParentBackground = False
+      TabOrder = 1
+      object Button8: TButton
+        Left = 36
+        Height = 25
+        Top = 16
+        Width = 75
+        Caption = 'Выключен'
+        TabOrder = 0
+        OnClick = Button1Click
+      end
+    end
+    object GroupBox14: TGroupBox
+      Left = 8
+      Height = 49
+      Top = 112
+      Width = 137
+      Caption = 'Проп.  клапан'
+      ClientHeight = 49
+      ClientWidth = 137
+      ParentBackground = False
+      TabOrder = 2
+      object Prop: TButton
+        Left = 36
+        Height = 25
+        Top = 16
+        Width = 75
+        Caption = 'Выключен'
+        TabOrder = 0
+        OnClick = Button1Click
+      end
+    end
+  end
+  object GroupBox2: TGroupBox
+    Left = 8
+    Height = 119
+    Top = 368
+    Width = 155
+    Caption = 'Управление РЕТАРДЕРОМ'
+    ClientHeight = 119
+    ClientWidth = 155
+    ParentBackground = False
+    TabOrder = 2
+    object GroupBox70: TGroupBox
+      Left = 8
+      Height = 49
+      Top = 16
+      Width = 139
+      Caption = 'Oграничение момента'
+      ClientHeight = 49
+      ClientWidth = 139
+      ParentBackground = False
+      TabOrder = 0
+      object Button10: TButton
+        Left = 32
+        Height = 25
+        Top = 16
+        Width = 75
+        Caption = 'Выключено'
+        TabOrder = 0
+        OnClick = Button1Click
+      end
+    end
+    object GroupBox71: TGroupBox
+      Left = 8
+      Height = 49
+      Top = 64
+      Width = 139
+      Caption = 'Задание момента'
+      ClientHeight = 49
+      ClientWidth = 139
+      ParentBackground = False
+      TabOrder = 1
+      object Button9: TButton
+        Left = 32
+        Height = 25
+        Top = 16
+        Width = 75
+        Caption = 'Выключено'
+        TabOrder = 0
+        OnClick = Button1Click
+      end
+    end
+  end
+  object GroupBox3: TGroupBox
+    Left = 8
+    Height = 169
+    Top = 2
+    Width = 188
+    Caption = 'Test PULS'
+    ClientHeight = 169
+    ClientWidth = 188
+    ParentBackground = False
+    TabOrder = 3
+    object Label255: TLabel
+      Left = 8
+      Height = 13
+      Top = 16
+      Width = 85
+      Caption = 'Передний левый'
+    end
+    object Label256: TLabel
+      Left = 8
+      Height = 13
+      Top = 48
+      Width = 91
+      Caption = 'Передний правый'
+    end
+    object Label257: TLabel
+      Left = 16
+      Height = 13
+      Top = 80
+      Width = 72
+      Caption = 'Задний левый'
+    end
+    object Label258: TLabel
+      Left = 16
+      Height = 13
+      Top = 112
+      Width = 78
+      Caption = 'Задний правый'
+    end
+    object Label1: TLabel
+      Left = 72
+      Height = 13
+      Top = 144
+      Width = 21
+      Caption = 'ВСЕ'
+    end
+    object Button1: TButton
+      Left = 104
+      Height = 25
+      Top = 8
+      Width = 75
+      Caption = 'Puls'
+      TabOrder = 0
+      OnClick = Button1Click
+    end
+    object Button2: TButton
+      Left = 104
+      Height = 25
+      Top = 40
+      Width = 75
+      Caption = 'Puls'
+      TabOrder = 1
+      OnClick = Button1Click
+    end
+    object Button3: TButton
+      Left = 104
+      Height = 25
+      Top = 72
+      Width = 75
+      Caption = 'Puls'
+      TabOrder = 2
+      OnClick = Button1Click
+    end
+    object Button4: TButton
+      Left = 104
+      Height = 25
+      Top = 104
+      Width = 75
+      Caption = 'Puls'
+      TabOrder = 3
+      OnClick = Button1Click
+    end
+    object Button6: TButton
+      Left = 104
+      Height = 25
+      Top = 136
+      Width = 75
+      Caption = 'Puls'
+      TabOrder = 4
+      OnClick = Button1Click
+    end
+  end
+  object GroupBox4: TGroupBox
+    Left = 202
+    Height = 169
+    Top = 2
+    Width = 124
+    Caption = 'Test Dif_Valve'
+    ClientHeight = 169
+    ClientWidth = 124
+    ParentBackground = False
+    TabOrder = 4
+    object GroupBox5: TGroupBox
+      Left = 8
+      Height = 49
+      Top = 14
+      Width = 108
+      Caption = 'Передний'
+      ClientHeight = 49
+      ClientWidth = 108
+      ParentBackground = False
+      TabOrder = 0
+      object Button11: TButton
+        Left = 24
+        Height = 25
+        Top = 16
+        Width = 75
+        Caption = 'Выключен'
+        TabOrder = 0
+        OnClick = Button1Click
+      end
+    end
+    object GroupBox6: TGroupBox
+      Left = 8
+      Height = 49
+      Top = 64
+      Width = 108
+      Caption = 'Задний '
+      ClientHeight = 49
+      ClientWidth = 108
+      ParentBackground = False
+      TabOrder = 1
+      object Button12: TButton
+        Left = 24
+        Height = 25
+        Top = 16
+        Width = 75
+        Caption = 'Выключен'
+        TabOrder = 0
+        OnClick = Button1Click
+      end
+    end
+    object GroupBox7: TGroupBox
+      Left = 8
+      Height = 49
+      Top = 114
+      Width = 108
+      Caption = 'Прицеп'
+      ClientHeight = 49
+      ClientWidth = 108
+      ParentBackground = False
+      TabOrder = 2
+      object Button13: TButton
+        Left = 24
+        Height = 25
+        Top = 16
+        Width = 75
+        Caption = 'Выключен'
+        TabOrder = 0
+        OnClick = Button1Click
+      end
+    end
+  end
+  object TrackBar2: TTrackBar
+    Cursor = crHandPoint
+    Left = 13
+    Height = 34
+    Top = 548
+    Width = 221
+    Frequency = 10
+    LineSize = 2
+    Max = 150
+    Position = 0
+    TickMarks = tmTopLeft
+    OnChange = TrackBar2Change
+    TabOrder = 5
+  end
+  object GroupBox8: TGroupBox
+    Left = 8
+    Height = 49
+    Top = 172
+    Width = 155
+    Caption = 'Modulator Test'
+    ClientHeight = 49
+    ClientWidth = 155
+    ParentBackground = False
+    TabOrder = 6
+    object Button14: TButton
+      Left = 46
+      Height = 25
+      Top = 16
+      Width = 75
+      Caption = 'Выключен'
+      TabOrder = 0
+      OnClick = Button1Click
+    end
+  end
+  object GroupBox9: TGroupBox
+    Left = 168
+    Height = 49
+    Top = 170
+    Width = 158
+    Caption = 'PnevmaticTest'
+    ClientHeight = 49
+    ClientWidth = 158
+    ParentBackground = False
+    TabOrder = 7
+    object Button15: TButton
+      Left = 46
+      Height = 25
+      Top = 16
+      Width = 75
+      Caption = 'Выключен'
+      TabOrder = 0
+      OnClick = Button1Click
+    end
+  end
+  object GroupBox10: TGroupBox
+    Left = 8
+    Height = 49
+    Top = 220
+    Width = 155
+    Caption = 'Break Front Test'
+    ClientHeight = 49
+    ClientWidth = 155
+    ParentBackground = False
+    TabOrder = 8
+    object Button16: TButton
+      Left = 46
+      Height = 25
+      Top = 16
+      Width = 75
+      Caption = 'Выключен'
+      TabOrder = 0
+      OnClick = Button1Click
+    end
+  end
+  object GroupBox11: TGroupBox
+    Left = 168
+    Height = 49
+    Top = 220
+    Width = 158
+    Caption = 'Break RearTest'
+    ClientHeight = 49
+    ClientWidth = 158
+    ParentBackground = False
+    TabOrder = 9
+    object Button17: TButton
+      Left = 46
+      Height = 25
+      Top = 16
+      Width = 75
+      Caption = 'Выключен'
+      TabOrder = 0
+      OnClick = Button1Click
+    end
+  end
+  object GroupBox12: TGroupBox
+    Left = 8
+    Height = 49
+    Top = 268
+    Width = 155
+    Caption = 'Hill Holder Test'
+    ClientHeight = 49
+    ClientWidth = 155
+    ParentBackground = False
+    TabOrder = 10
+    object Button18: TButton
+      Left = 46
+      Height = 25
+      Top = 16
+      Width = 75
+      Caption = 'Выключен'
+      TabOrder = 0
+      OnClick = Button1Click
+    end
+  end
+  object GroupBox13: TGroupBox
+    Left = 168
+    Height = 49
+    Top = 268
+    Width = 158
+    Caption = 'Halt Brake Test'
+    ClientHeight = 49
+    ClientWidth = 158
+    ParentBackground = False
+    TabOrder = 11
+    object Button19: TButton
+      Left = 46
+      Height = 25
+      Top = 16
+      Width = 75
+      Caption = 'Выключен'
+      TabOrder = 0
+      OnClick = Button1Click
+    end
+  end
+  object grp1: TGroupBox
+    Left = 8
+    Height = 49
+    Top = 316
+    Width = 155
+    Caption = 'XBR Test'
+    ClientHeight = 49
+    ClientWidth = 155
+    ParentBackground = False
+    TabOrder = 12
+    object ButtonXBR: TButton
+      Left = 46
+      Height = 25
+      Top = 16
+      Width = 75
+      Caption = 'Выключен'
+      TabOrder = 0
+      OnClick = Button1Click
+    end
+  end
+  object GroupBox15: TGroupBox
+    Left = 168
+    Height = 47
+    Top = 486
+    Width = 153
+    Caption = 'Brake Only Axis    REAR'
+    ClientHeight = 47
+    ClientWidth = 153
+    ParentBackground = False
+    TabOrder = 13
+    object btn1: TButton
+      Left = 42
+      Height = 25
+      Top = 14
+      Width = 75
+      Caption = 'Выключено'
+      TabOrder = 0
+      OnClick = Button1Click
+    end
+  end
+  object GroupBox16: TGroupBox
+    Left = 8
+    Height = 47
+    Top = 486
+    Width = 153
+    Caption = 'Brake Only Axis  FRONT'
+    ClientHeight = 47
+    ClientWidth = 153
+    ParentBackground = False
+    TabOrder = 14
+    object btn2: TButton
+      Left = 38
+      Height = 25
+      Top = 14
+      Width = 75
+      Caption = 'Выключено'
+      TabOrder = 0
+      OnClick = Button1Click
+    end
+  end
+end

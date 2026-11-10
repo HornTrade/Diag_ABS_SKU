@@ -1,0 +1,36 @@
+object Form3: TForm3
+  Left = 221
+  Height = 123
+  Top = 270
+  Width = 365
+  BorderIcons = []
+  BorderStyle = bsSingle
+  Caption = 'Акустический тест модулятора'
+  ClientHeight = 123
+  ClientWidth = 365
+  Color = clBtnFace
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Position = poScreenCenter
+  LCLVersion = '4.8.0.0'
+  OnCreate = FormCreate
+  OnPaint = FormPaint
+  object BitBtn1: TBitBtn
+    Left = 128
+    Height = 25
+    Top = 90
+    Width = 97
+    Caption = 'Abort Test'
+    Kind = bkCancel
+    TabOrder = 0
+    OnClick = BitBtn1Click
+  end
+  object ProgressBar1: TProgressBar
+    Left = 16
+    Height = 16
+    Top = 64
+    Width = 337
+    TabOrder = 1
+  end
+end

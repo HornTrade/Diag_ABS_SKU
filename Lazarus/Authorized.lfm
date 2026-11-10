@@ -1,0 +1,92 @@
+object AuthorizedForm: TAuthorizedForm
+  Left = 980
+  Height = 284
+  Top = 372
+  Width = 260
+  Caption = 'Авторизация'
+  ClientHeight = 284
+  ClientWidth = 260
+  Color = clBtnFace
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  LCLVersion = '4.8.0.0'
+  OnShow = FormShow
+  object Button1: TButton
+    Left = 136
+    Height = 25
+    Top = 216
+    Width = 97
+    Caption = 'Внести в Список'
+    TabOrder = 0
+    OnClick = Button1Click
+  end
+  object GroupBox1: TGroupBox
+    Left = 8
+    Height = 137
+    Top = 4
+    Width = 225
+    Caption = 'Список Авторизованных  Лиц'
+    ClientHeight = 137
+    ClientWidth = 225
+    ParentBackground = False
+    TabOrder = 1
+    object AuthorizedGrid: TStringGrid
+      Left = 40
+      Height = 111
+      Top = 16
+      Width = 177
+      ColCount = 2
+      DefaultColWidth = 30
+      DefaultRowHeight = 16
+      Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goRowSelect, goThumbTracking]
+      RowCount = 6
+      ScrollBars = ssVertical
+      TabOrder = 0
+      OnSelectCell = AuthorizedGridSelectCell
+      ColWidths = (
+        30
+        192
+      )
+    end
+  end
+  object GroupBox: TGroupBox
+    Left = 8
+    Height = 65
+    Top = 142
+    Width = 225
+    Caption = 'Authorized'
+    ClientHeight = 65
+    ClientWidth = 225
+    ParentBackground = False
+    TabOrder = 2
+    object Label22: TLabel
+      Left = 30
+      Height = 13
+      Top = 16
+      Width = 42
+      Caption = 'Surname'
+    end
+    object Label2: TLabel
+      Left = 40
+      Height = 13
+      Top = 40
+      Width = 28
+      Caption = ' Code'
+    end
+    object Edit1: TEdit
+      Left = 74
+      Height = 21
+      Top = 12
+      Width = 140
+      TabOrder = 0
+    end
+    object Edit2: TEdit
+      Left = 74
+      Height = 21
+      Top = 36
+      Width = 140
+      TabOrder = 1
+    end
+  end
+end

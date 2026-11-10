@@ -1,0 +1,48 @@
+object Form6: TForm6
+  Left = 673
+  Height = 388
+  Top = 94
+  Width = 668
+  BorderStyle = bsSingle
+  Caption = 'Dump Flash'
+  ClientHeight = 388
+  ClientWidth = 668
+  Color = clBtnFace
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  LCLVersion = '4.8.0.0'
+  OnClose = FormClose
+  OnShow = FormShow
+  object Motdump: TStringGrid
+    Left = 8
+    Height = 375
+    Top = 2
+    Width = 547
+    ColCount = 17
+    DefaultColWidth = 30
+    DefaultRowHeight = 16
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goEditing, goThumbTracking]
+    RowCount = 17
+    TabOrder = 0
+  end
+  object bQuit: TButton
+    Left = 572
+    Height = 25
+    Top = 296
+    Width = 85
+    Caption = 'Выход'
+    TabOrder = 1
+    OnClick = bQuitClick
+  end
+  object bRead: TButton
+    Left = 572
+    Height = 25
+    Top = 260
+    Width = 85
+    Caption = 'Прочитать'
+    Enabled = False
+    TabOrder = 2
+    OnClick = bReadClick
+  end
+end
