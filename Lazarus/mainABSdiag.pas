@@ -18,7 +18,7 @@ uses
   IniFiles, ActnList, MaskEdit, Grids, Spin,
   RoadTest, Link_Processor, Link_Unit, Dump, Unit4, Graph001,
   Stend, Unit7, Unit8,
-  TAGraph, TASeries;   // ← lazTeeChart
+  TAGraph, TASeries{, LastErrorStack};   // ← lazTeeChart
 
 type
 
@@ -2423,6 +2423,8 @@ type
     procedure CheckBox354Click(Sender: TObject);
     procedure CheckBox355Click(Sender: TObject);
     procedure rg4Click(Sender: TObject);
+    procedure InitImageLists;
+    // procedure AppException(Sender: TObject; E: Exception);
 
   private
     { Private declarations }
@@ -2494,6 +2496,12 @@ Var i:integer;
 begin
  // BASS_Init(-1, 44100, 0, application.Handle, nil);
  //    geAutoScale(Form1);
+     // Application.OnException := AppException;
+     IL1.Width := 16;  IL1.Height := 16;
+     IL2.Width := 32;  IL2.Height := 32;
+     IL3.Width := 32;  IL3.Height := 32;
+     comqueue := TQueue.Create(comqueue);//Î÷åðåäü êîìàíä
+
      if not LoadIniFile then halt;//ABSini.ini
      Image_Err_Num:=20;
      if CheckBox45.Checked then  Memo3.Visible:= true
@@ -2627,9 +2635,9 @@ begin
      //äîáàâèòü SbArray[25] åñëè íîâûå SB
      for i:=0 to Const_Image_Err_New  do SbColorBuf[i]:=4;
      PageControl1.ActivePageIndex := 0;
-     comqueue := TQueue.Create(comqueue);//Î÷åðåäü êîìàíä
 
      Form1.rg3.ItemIndex:=0; //MC1
+     InitImageLists;
 end;
 
 //***********************************************************
@@ -3636,7 +3644,7 @@ begin
           if Tip_Block < 8 then
            begin
              Rows:= StrToInt(DiagIni.ReadString('Selector_Oss_Old','N','35'));
-             Form1._SelOss_Grid.RowCount:=Rows;
+             Form1._SelOss_Grid.RowCount:=Rows + 1;
              Form1._SelOss_Grid.ColWidths[1]:=60;
              for Loop:=0 to Rows do
              begin
@@ -3648,7 +3656,7 @@ begin
            else
            begin
              Rows:= StrToInt(DiagIni.ReadString('Selector_Oss','N','15'));
-             Form1._SelOss_Grid.RowCount:=Rows;
+             Form1._SelOss_Grid.RowCount:=Rows+1;
              Form1._SelOss_Grid.ColWidths[1]:=60;
              for Loop:=0 to Rows do
              begin
@@ -5130,30 +5138,30 @@ begin
    Form1.Edit32.Text:=FloatToStr(DiagIni.ReadFloat('Poly','V0',0));
    Form1.ComboBox1.ItemIndex:=DiagIni.ReadInteger('Poly','DorogaL',0);
    Form1.ComboBox2.ItemIndex:=DiagIni.ReadInteger('Poly','DorogaR',0);
-   Form1.Series0.Active:=DiagIni.ReadBool('Poly_Enable','Series0',False);;
-   Form1.Series1.Active:=DiagIni.ReadBool('Poly_Enable','Series1',False);;
-   Form1.Series2.Active:=DiagIni.ReadBool('Poly_Enable','Series2',False);;
-   Form1.Series3.Active:=DiagIni.ReadBool('Poly_Enable','Series3',False);;
-   Form1.Series4.Active:=DiagIni.ReadBool('Poly_Enable','Series4',False);;
-   Form1.Series5.Active:=DiagIni.ReadBool('Poly_Enable','Series5',False);;
-   Form1.Series6.Active:=DiagIni.ReadBool('Poly_Enable','Series6',False);;
-   Form1.Series7.Active:=DiagIni.ReadBool('Poly_Enable','Series7',False);;
-   Form1.Series8.Active:=DiagIni.ReadBool('Poly_Enable','Series8',False);;
-   Form1.Series13.Active:=DiagIni.ReadBool('Poly_Enable','Series13',False);;
-   Form1.Series14.Active:=DiagIni.ReadBool('Poly_Enable','Series14',False);;
-   Form1.Series15.Active:=DiagIni.ReadBool('Poly_Enable','Series15',False);;
-   Form1.Series16.Active:=DiagIni.ReadBool('Poly_Enable','Series16',False);;
-   Form1.Series17.Active:=DiagIni.ReadBool('Poly_Enable','Series17',False);;
-   Form1.Series18.Active:=DiagIni.ReadBool('Poly_Enable','Series18',False);;
-   Form1.Series19.Active:=DiagIni.ReadBool('Poly_Enable','Series19',False);;
-   Form1.Series20.Active:=DiagIni.ReadBool('Poly_Enable','Series20',False);;
-   Form1.Series21.Active:=DiagIni.ReadBool('Poly_Enable','Series21',False);;
-   Form1.Series24.Active:=DiagIni.ReadBool('Poly_Enable','Series24',False);;
-   Form1.Series25.Active:=DiagIni.ReadBool('Poly_Enable','Series25',False);;
-   Form1.Series26.Active:=DiagIni.ReadBool('Poly_Enable','Series26',False);;
-   Form1.Series27.Active:=DiagIni.ReadBool('Poly_Enable','Series27',False);;
-   Form1.Series28.Active:=DiagIni.ReadBool('Poly_Enable','Series28',False);;
-   Form1.Series29.Active:=DiagIni.ReadBool('Poly_Enable','Series29',False);;
+   //Form1.Series0.Active:=DiagIni.ReadBool('Poly_Enable','Series0',False);;
+   //Form1.Series1.Active:=DiagIni.ReadBool('Poly_Enable','Series1',False);;
+   //Form1.Series2.Active:=DiagIni.ReadBool('Poly_Enable','Series2',False);;
+   //Form1.Series3.Active:=DiagIni.ReadBool('Poly_Enable','Series3',False);;
+   //Form1.Series4.Active:=DiagIni.ReadBool('Poly_Enable','Series4',False);;
+   //Form1.Series5.Active:=DiagIni.ReadBool('Poly_Enable','Series5',False);;
+   //Form1.Series6.Active:=DiagIni.ReadBool('Poly_Enable','Series6',False);;
+   //Form1.Series7.Active:=DiagIni.ReadBool('Poly_Enable','Series7',False);;
+   //Form1.Series8.Active:=DiagIni.ReadBool('Poly_Enable','Series8',False);;
+   //Form1.Series13.Active:=DiagIni.ReadBool('Poly_Enable','Series13',False);;
+   //Form1.Series14.Active:=DiagIni.ReadBool('Poly_Enable','Series14',False);;
+   //Form1.Series15.Active:=DiagIni.ReadBool('Poly_Enable','Series15',False);;
+   //Form1.Series16.Active:=DiagIni.ReadBool('Poly_Enable','Series16',False);;
+   //Form1.Series17.Active:=DiagIni.ReadBool('Poly_Enable','Series17',False);;
+   //Form1.Series18.Active:=DiagIni.ReadBool('Poly_Enable','Series18',False);;
+   //Form1.Series19.Active:=DiagIni.ReadBool('Poly_Enable','Series19',False);;
+   //Form1.Series20.Active:=DiagIni.ReadBool('Poly_Enable','Series20',False);;
+   //Form1.Series21.Active:=DiagIni.ReadBool('Poly_Enable','Series21',False);;
+   //Form1.Series24.Active:=DiagIni.ReadBool('Poly_Enable','Series24',False);;
+   //Form1.Series25.Active:=DiagIni.ReadBool('Poly_Enable','Series25',False);;
+   //Form1.Series26.Active:=DiagIni.ReadBool('Poly_Enable','Series26',False);;
+   //Form1.Series27.Active:=DiagIni.ReadBool('Poly_Enable','Series27',False);;
+   //Form1.Series28.Active:=DiagIni.ReadBool('Poly_Enable','Series28',False);;
+   //Form1.Series29.Active:=DiagIni.ReadBool('Poly_Enable','Series29',False);;
 
    Form1.Edit1.Text:=IntToStr(DiagIni.ReadInteger('OSC_Address','Osc_Adr_1',0));
    Form1.Edit2.Text:=IntToStr(DiagIni.ReadInteger('OSC_Address','Osc_Adr_2',0));
@@ -5312,10 +5320,12 @@ begin
    KeyIni2v10:=DiagIni.ReadInteger('v10Key','KeyByte2',1);
    KeyIni3v10:=DiagIni.ReadInteger('v10Key','KeyByte3',1);
    For Loop:=1 to 30 do
+   begin
    SenOscTest_Thresh[Loop]:=DiagIni.ReadFloat('PcbSS_Test_Result',IntToStr(Loop),0);
+   end;
 
    Rows:= StrToInt(DiagIni.ReadString('Selector_Oss','N','12'));
-   Form1._SelOss_Grid.RowCount:=Rows;
+   Form1._SelOss_Grid.RowCount:=Rows+1;
    Form1._SelOss_Grid.ColWidths[1]:=60;
    for Loop:=0 to Rows do
    begin
@@ -5356,30 +5366,30 @@ begin
    DiagIni.WriteFloat('Poly','V0',StrToFloat(form1.Edit32.Text));
    DiagIni.WriteInteger('Poly','DorogaL',Form1.ComboBox1.ItemIndex);
    DiagIni.WriteInteger('Poly','DorogaR',Form1.ComboBox2.ItemIndex);
-   DiagIni.WriteBool('Poly_Enable','Series0',Form1.Series0.Active);
-   DiagIni.WriteBool('Poly_Enable','Series1',Form1.Series1.Active);
-   DiagIni.WriteBool('Poly_Enable','Series2',Form1.Series2.Active);
-   DiagIni.WriteBool('Poly_Enable','Series3',Form1.Series3.Active);
-   DiagIni.WriteBool('Poly_Enable','Series4',Form1.Series4.Active);
-   DiagIni.WriteBool('Poly_Enable','Series5',Form1.Series5.Active);
-   DiagIni.WriteBool('Poly_Enable','Series6',Form1.Series6.Active);
-   DiagIni.WriteBool('Poly_Enable','Series7',Form1.Series7.Active);
-   DiagIni.WriteBool('Poly_Enable','Series8',Form1.Series8.Active);
-   DiagIni.WriteBool('Poly_Enable','Series13',Form1.Series13.Active);
-   DiagIni.WriteBool('Poly_Enable','Series14',Form1.Series14.Active);
-   DiagIni.WriteBool('Poly_Enable','Series15',Form1.Series15.Active);
-   DiagIni.WriteBool('Poly_Enable','Series16',Form1.Series16.Active);
-   DiagIni.WriteBool('Poly_Enable','Series17',Form1.Series17.Active);
-   DiagIni.WriteBool('Poly_Enable','Series18',Form1.Series18.Active);
-   DiagIni.WriteBool('Poly_Enable','Series19',Form1.Series19.Active);
-   DiagIni.WriteBool('Poly_Enable','Series20',Form1.Series20.Active);
-   DiagIni.WriteBool('Poly_Enable','Series21',Form1.Series21.Active);
-   DiagIni.WriteBool('Poly_Enable','Series24',Form1.Series24.Active);
-   DiagIni.WriteBool('Poly_Enable','Series25',Form1.Series25.Active);
-   DiagIni.WriteBool('Poly_Enable','Series26',Form1.Series26.Active);
-   DiagIni.WriteBool('Poly_Enable','Series27',Form1.Series27.Active);
-   DiagIni.WriteBool('Poly_Enable','Series28',Form1.Series28.Active);
-   DiagIni.WriteBool('Poly_Enable','Series29',Form1.Series29.Active);
+   //DiagIni.WriteBool('Poly_Enable','Series0',Form1.Series0.Active);
+   //DiagIni.WriteBool('Poly_Enable','Series1',Form1.Series1.Active);
+   //DiagIni.WriteBool('Poly_Enable','Series2',Form1.Series2.Active);
+   //DiagIni.WriteBool('Poly_Enable','Series3',Form1.Series3.Active);
+   //DiagIni.WriteBool('Poly_Enable','Series4',Form1.Series4.Active);
+   //DiagIni.WriteBool('Poly_Enable','Series5',Form1.Series5.Active);
+   //DiagIni.WriteBool('Poly_Enable','Series6',Form1.Series6.Active);
+   //DiagIni.WriteBool('Poly_Enable','Series7',Form1.Series7.Active);
+   //DiagIni.WriteBool('Poly_Enable','Series8',Form1.Series8.Active);
+   //DiagIni.WriteBool('Poly_Enable','Series13',Form1.Series13.Active);
+   //DiagIni.WriteBool('Poly_Enable','Series14',Form1.Series14.Active);
+   //DiagIni.WriteBool('Poly_Enable','Series15',Form1.Series15.Active);
+   //DiagIni.WriteBool('Poly_Enable','Series16',Form1.Series16.Active);
+   //DiagIni.WriteBool('Poly_Enable','Series17',Form1.Series17.Active);
+   //DiagIni.WriteBool('Poly_Enable','Series18',Form1.Series18.Active);
+   //DiagIni.WriteBool('Poly_Enable','Series19',Form1.Series19.Active);
+   //DiagIni.WriteBool('Poly_Enable','Series20',Form1.Series20.Active);
+   //DiagIni.WriteBool('Poly_Enable','Series21',Form1.Series21.Active);
+   //DiagIni.WriteBool('Poly_Enable','Series24',Form1.Series24.Active);
+   //DiagIni.WriteBool('Poly_Enable','Series25',Form1.Series25.Active);
+   //DiagIni.WriteBool('Poly_Enable','Series26',Form1.Series26.Active);
+   //DiagIni.WriteBool('Poly_Enable','Series27',Form1.Series27.Active);
+   //DiagIni.WriteBool('Poly_Enable','Series28',Form1.Series28.Active);
+   //DiagIni.WriteBool('Poly_Enable','Series29',Form1.Series29.Active);
 
    DiagIni.WriteInteger('OSC_Address','Osc_Adr_1',StrToInt(Form1.Edit1.Text));
    DiagIni.WriteInteger('OSC_Address','Osc_Adr_2',StrToInt(Form1.Edit2.Text));
@@ -18444,6 +18454,99 @@ procedure TForm1.rg4Click(Sender: TObject);
 begin
     DiagIni.WriteString('UpGrade_Serial','ProgrammatorNEW',IntToStr(Form1.rg4.ItemIndex));
 end;
+
+procedure TForm1.InitImageLists;
+var
+  Bmp: TBitmap;
+  i: Integer;
+begin
+  // IL1 — лампы статуса (8 картинок 16x16)
+  // 0 — серый (неактивна), 1 — красный (активна), 2 — зелёный, 3 — жёлтый
+  IL1.Clear;
+  IL1.Width  := 16;
+  IL1.Height := 16;
+  if (IL1.Width = 0) or (IL1.Height = 0) then
+    raise Exception.Create('IL1.Width/Height = 0 перед Add!');
+
+  for i := 0 to 7 do
+  begin
+    Bmp := TBitmap.Create;
+    try
+      Bmp.SetSize(16, 16);
+      Bmp.Canvas.Brush.Color := clGray;
+      Bmp.Canvas.FillRect(0, 0, 16, 16);
+      case i of
+        1: Bmp.Canvas.Brush.Color := clRed;
+        2: Bmp.Canvas.Brush.Color := clGreen;
+        3: Bmp.Canvas.Brush.Color := clYellow;
+      else Bmp.Canvas.Brush.Color := clGray;
+      end;
+      Bmp.Canvas.Ellipse(1, 1, 15, 15);
+      // Используем AddMasked, если нужна прозрачность по цвету фона.
+      // Если прозрачность не нужна, можно оставить Add(Bmp, nil).
+      IL1.AddMasked(Bmp, clBtnFace);
+
+      //IL1.Add(Bmp, nil);
+    finally
+      Bmp.Free;
+    end;
+  end;
+
+  // IL2 — индикатор связи (2 картинки 32x32): 0 — «нет связи», 1 — «есть связь»
+  IL2.Clear;
+  IL2.Width  := 32;
+  IL2.Height := 32;
+  for i := 0 to 1 do
+  begin
+    Bmp := TBitmap.Create;
+    try
+      Bmp.SetSize(32, 32);
+      Bmp.Canvas.Brush.Color := clBtnFace;
+      Bmp.Canvas.FillRect(0, 0, 32, 32);
+      Bmp.Canvas.Pen.Width  := 2;
+      if i = 1 then Bmp.Canvas.Brush.Color := clLime
+      else          Bmp.Canvas.Brush.Color := clSilver;
+      Bmp.Canvas.Ellipse(4, 4, 28, 28);
+      IL2.Add(Bmp, nil);
+    finally
+      Bmp.Free;
+    end;
+  end;
+
+  // IL3 — иконки тулбара (в оригинале ~20 штук 32x32)
+  // Заглушки: разноцветные квадраты; в реальной сборке замените на свои PNG
+  IL3.Clear;
+  IL3.Width  := 32;
+  IL3.Height := 32;
+  for i := 0 to 19 do
+  begin
+    Bmp := TBitmap.Create;
+    try
+      Bmp.SetSize(32, 32);
+      Bmp.Canvas.Brush.Color := clBtnFace;
+      Bmp.Canvas.FillRect(0, 0, 32, 32);
+      Bmp.Canvas.Pen.Color := clBlack;
+      Bmp.Canvas.Brush.Color := RGB(64 + i * 8, 128, 255 - i * 8);
+      Bmp.Canvas.Rectangle(4, 4, 28, 28);
+      IL3.Add(Bmp, nil);
+    finally
+      Bmp.Free;
+    end;
+  end;
+end;
+
+// procedure TForm1.AppException(Sender: TObject; E: Exception);
+// begin
+//   with TStringList.Create do
+//     try
+//       Add(FormatDateTime('yyyy-mm-dd hh:nn:ss', Now));
+//       Add(E.ClassName + ': ' + E.Message);
+//       Add(lasterrorstack);       // в FPC: SysUtils.GetStackTrace
+//       SaveToFile(ExtractFilePath(Application.ExeName) + 'diag_crash.log');
+//     finally
+//       Free;
+//     end;
+// end;
 
 function TTabSheetHelper.GetHighlighted: Boolean;
 begin
