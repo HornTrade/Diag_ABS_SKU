@@ -108,7 +108,7 @@
   </div>
   <div class="app-body">
     <div class="pagecontrol">
-      <div class="tabs-bar" role="tablist">
+      <div class="tabs-bar" role="tablist" onclick="alert(`ComboBox1: ${localStorage.getItem('ComboBox1')}`)">
         <a class="tab active" href="#PageControl1_p0" role="tab">Данные ABS</a>
         <a class="tab" href="#PageControl1_p1" role="tab">Неисправности</a>
         <a class="tab" href="#PageControl1_p2" role="tab">Полигон</a>
@@ -249,45 +249,39 @@
         <button type="button" class="btn-primary" onclick="btnDelAll_Click()">Удалить пассивные неисправности</button>
         </div>
         <div class="tab-pane" id="PageControl1_p2" role="tabpanel">
-        <span class="lbl">дорога L</span>
-        <span class="lbl">дорога R</span>
         <span class="lbl">Vкм/ч</span>
         <span class="lbl">Pатм</span>
         <button type="button" class="btn-secondary" onclick="PolyBtn_Click()">Старт</button>
         <span class="lbl">Gт</span>
         <span class="lbl">Скат</span>
         <div class="dfm-chart">TChart: Chart1 — замените на Chart.js/ECharts</div>
-        <div class="statusbar"><span>Готов</span><span>—</span></div>
-                    <!-- <select  onchange="sendCanMsgHandleSelection(this.value)" style="max-width: 130px;">
-                        <option value="18EF2F88#FB01000000000000" selected>PropA</option>
-                        <option value="18EA2F88#CBFE00" title="Считать пассивные ошибки" >RQST: DM2</option>
-                        <option value="18EAFF88#CCFE00" title="Стереть пассивные ошибки" >RQST: DM3</option>
-                        <option value="18EAFF88#D3FE00" title="Стереть активные и пассивные ошибки" >RQST: DM11</option>
-                        <option value="18EA2F88#EAFE00" title="Vehicle Weight" >RQST: VW</option>
-                        <option value="18EA2F88#DAFE00" title="Software Identification" >RQST: SOFT</option>
-                    </select> -->
-        <select id="ComboBox1" class="form-select-sm" aria-label="ComboBox1" style="width:201px;">
-          <option>сухой бетон µ_max 0,85</option>
-          <option>мокрый бетон µ_max 0,7</option>
-          <option>мокрый бетон µ_max 0,5</option>
-          <option>плотный снег µ_max 0,35</option>
-          <option>сухой лед µ_max 0,2</option>
-          <option>мокрый лед µ_max 0,08</option>
-        </select>
-        <select id="ComboBox2" class="form-select-sm" aria-label="ComboBox2" style="width:197px;">
-          <option>сухой бетон µ_max 0,85</option>
-          <option>мокрый бетон µ_max 0,7</option>
-          <option>мокрый бетон µ_max 0,5</option>
-          <option>плотный снег µ_max 0,35</option>
-          <option>сухой лед µ_max 0,2</option>
-          <option>мокрый лед µ_max 0,08</option>
-        </select>
-        <input id="Edit32" class="form-control-sm" type="text" value="" style="width:28px;" aria-label="Edit32">
-        <select id="ComboBox3" class="form-select-sm" aria-label="ComboBox3" style="width:80px;"></select>
-        <input id="Edit44" class="form-control-sm" type="text" value="8" style="width:25px;" aria-label="Edit44">
-        <input id="Edit45" class="form-control-sm" type="text" value="0" style="width:25px;" aria-label="Edit45">
-        <input id="Edit46" class="form-control-sm" type="text" value="0" style="width:25px;" aria-label="Edit46">
-        <label class="chk"><input id="CheckBox48" type="checkbox" checked> <span>CheckBox48</span></label>
+        <!-- <div class="statusbar"><span>Готов</span><span>—</span></div> -->
+        <div>
+          <span class="lbl">дорога L</span>
+          <select id="ComboBox1" onchange="poligonHandleSelection(this)" class="form-select-sm" aria-label="ComboBox1" style="width:201px;">
+            <option>сухой бетон µ_max 0,85</option>
+            <option>мокрый бетон µ_max 0,7</option>
+            <option>мокрый бетон µ_max 0,5</option>
+            <option>плотный снег µ_max 0,35</option>
+            <option>сухой лед µ_max 0,2</option>
+            <option>мокрый лед µ_max 0,08</option>
+          </select>
+          <span class="lbl">дорога R</span>
+          <select id="ComboBox2" class="form-select-sm" aria-label="ComboBox2" style="width:197px;">
+            <option>сухой бетон µ_max 0,85</option>
+            <option>мокрый бетон µ_max 0,7</option>
+            <option>мокрый бетон µ_max 0,5</option>
+            <option>плотный снег µ_max 0,35</option>
+            <option>сухой лед µ_max 0,2</option>
+            <option>мокрый лед µ_max 0,08</option>
+          </select>
+          <input id="Edit32" class="form-control-sm" type="text" value="" style="width:28px;" aria-label="Edit32">
+          <select id="ComboBox3" class="form-select-sm" aria-label="ComboBox3" style="width:80px;"></select>
+          <input id="Edit44" class="form-control-sm" type="text" value="8" style="width:25px;" aria-label="Edit44">
+          <input id="Edit45" class="form-control-sm" type="text" value="0" style="width:25px;" aria-label="Edit45">
+          <input id="Edit46" class="form-control-sm" type="text" value="0" style="width:25px;" aria-label="Edit46">
+          <label class="chk"><input id="CheckBox48" type="checkbox" checked> <span>CheckBox48</span></label>
+          </div>
         </div>
         <div class="tab-pane" id="PageControl1_p3" role="tabpanel">
         <div class="dfm-paintbox"></div>
@@ -3680,6 +3674,19 @@
   function btn5_Click(){ dfmLog("Клик: DZ"); }
   function btn6_Click(){ dfmLog("Клик: PA"); }
   function btn3_Click(){ dfmLog("Клик: MAKE SKU"); }
+
+  function poligonHandleSelection(obj){
+    console.log(obj);
+    // Save data
+    localStorage.setItem(obj.id, obj.value);
+
+    // Retrieve data
+    // let user = localStorage.getItem("username");
+
+    // Remove data
+    // localStorage.removeItem("username");
+  }
 </script>
+<script src="mainABSdiagPure.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body></html>
